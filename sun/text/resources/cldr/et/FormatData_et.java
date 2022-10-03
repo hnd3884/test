@@ -1,0 +1,11 @@
+package sun.text.resources.cldr.et;
+
+import java.util.ListResourceBundle;
+
+public class FormatData_et extends ListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "MonthNames", { "jaanuar", "veebruar", "m\u00e4rts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember", "" } }, { "MonthAbbreviations", { "jaan", "veebr", "m\u00e4rts", "apr", "mai", "juuni", "juuli", "aug", "sept", "okt", "nov", "dets", "" } }, { "MonthNarrows", { "J", "V", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D", "" } }, { "DayNames", { "p\u00fchap\u00e4ev", "esmasp\u00e4ev", "teisip\u00e4ev", "kolmap\u00e4ev", "neljap\u00e4ev", "reede", "laup\u00e4ev" } }, { "DayAbbreviations", { "P", "E", "T", "K", "N", "R", "L" } }, { "DayNarrows", { "P", "E", "T", "K", "N", "R", "L" } }, { "QuarterNames", { "1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal" } }, { "QuarterAbbreviations", { "K1", "K2", "K3", "K4" } }, { "QuarterNarrows", { "1", "2", "3", "4" } }, { "AmPmMarkers", { "enne keskp\u00e4eva", "p\u00e4rast keskp\u00e4eva" } }, { "long.Eras", { "enne meie aega", "meie aja j\u00e4rgi" } }, { "Eras", { "e.m.a.", "m.a.j." } }, { "field.era", "ajastu" }, { "field.year", "aasta" }, { "field.month", "kuu" }, { "field.week", "n\u00e4dal" }, { "field.weekday", "n\u00e4dalap\u00e4ev" }, { "field.dayperiod", "enne/p\u00e4rast l\u00f5unat" }, { "field.hour", "tund" }, { "field.minute", "minut" }, { "field.second", "sekund" }, { "field.zone", "v\u00f6\u00f6nd" }, { "TimePatterns", { "H:mm.ss zzzz", "H:mm.ss z", "H:mm.ss", "H:mm" } }, { "DatePatterns", { "EEEE, d. MMMM y", "d. MMMM y", "dd.MM.yyyy", "dd.MM.yy" } }, { "calendarname.gregorian", "Gregoriuse kalender" }, { "calendarname.gregory", "Gregoriuse kalender" }, { "calendarname.roc", "Hiina Vabariigi kalender" }, { "calendarname.islamic-civil", "islami ilmalik kalender" }, { "calendarname.islamicc", "islami ilmalik kalender" }, { "calendarname.japanese", "Jaapani kalender" }, { "calendarname.buddhist", "budistlik kalender" }, { "calendarname.islamic", "islamikalender" }, { "DefaultNumberingSystem", "latn" }, { "latn.NumberElements", { ".", "а", ";", "%", "0", "#", "-", "E", "\u2030", "\u221e", "NaN" } }, { "NumberPatterns", { "#,##0.###", "#,##0.00ад", "#,##0%" } } };
+    }
+}

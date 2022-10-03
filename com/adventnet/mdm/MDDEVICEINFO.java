@@ -1,0 +1,83 @@
+package com.adventnet.mdm;
+
+public final class MDDEVICEINFO
+{
+    public static final String TABLE = "MdDeviceInfo";
+    public static final String RESOURCE_ID = "RESOURCE_ID";
+    public static final int RESOURCE_ID_IDX = 1;
+    public static final String OS_VERSION = "OS_VERSION";
+    public static final int OS_VERSION_IDX = 2;
+    public static final String BUILD_VERSION = "BUILD_VERSION";
+    public static final int BUILD_VERSION_IDX = 3;
+    public static final String SERIAL_NUMBER = "SERIAL_NUMBER";
+    public static final int SERIAL_NUMBER_IDX = 4;
+    public static final String MODEL_ID = "MODEL_ID";
+    public static final int MODEL_ID_IDX = 5;
+    public static final String BATTERY_LEVEL = "BATTERY_LEVEL";
+    public static final int BATTERY_LEVEL_IDX = 6;
+    public static final String CELLULAR_TECHNOLOGY = "CELLULAR_TECHNOLOGY";
+    public static final int CELLULAR_TECHNOLOGY_IDX = 7;
+    public static final String IMEI = "IMEI";
+    public static final int IMEI_IDX = 8;
+    public static final String MEID = "MEID";
+    public static final int MEID_IDX = 9;
+    public static final String MODEM_FIRMWARE_VERSION = "MODEM_FIRMWARE_VERSION";
+    public static final int MODEM_FIRMWARE_VERSION_IDX = 10;
+    public static final String FIRMWARE_VERSION = "FIRMWARE_VERSION";
+    public static final int FIRMWARE_VERSION_IDX = 11;
+    public static final String DEVICE_CAPACITY = "DEVICE_CAPACITY";
+    public static final int DEVICE_CAPACITY_IDX = 12;
+    public static final String AVAILABLE_DEVICE_CAPACITY = "AVAILABLE_DEVICE_CAPACITY";
+    public static final int AVAILABLE_DEVICE_CAPACITY_IDX = 13;
+    public static final String USED_DEVICE_SPACE = "USED_DEVICE_SPACE";
+    public static final int USED_DEVICE_SPACE_IDX = 14;
+    public static final String EXTERNAL_CAPACITY = "EXTERNAL_CAPACITY";
+    public static final int EXTERNAL_CAPACITY_IDX = 15;
+    public static final String AVAILABLE_EXTERNAL_CAPACITY = "AVAILABLE_EXTERNAL_CAPACITY";
+    public static final int AVAILABLE_EXTERNAL_CAPACITY_IDX = 16;
+    public static final String USED_EXTERNAL_SPACE = "USED_EXTERNAL_SPACE";
+    public static final int USED_EXTERNAL_SPACE_IDX = 17;
+    public static final String OS_NAME = "OS_NAME";
+    public static final int OS_NAME_IDX = 18;
+    public static final String PROCESSOR_SPEED = "PROCESSOR_SPEED";
+    public static final int PROCESSOR_SPEED_IDX = 19;
+    public static final String PROCESSOR_TYPE = "PROCESSOR_TYPE";
+    public static final int PROCESSOR_TYPE_IDX = 20;
+    public static final String PROCESSOR_ARCHITECTURE = "PROCESSOR_ARCHITECTURE";
+    public static final int PROCESSOR_ARCHITECTURE_IDX = 21;
+    public static final String AVAILABLE_RAM_MEMORY = "AVAILABLE_RAM_MEMORY";
+    public static final int AVAILABLE_RAM_MEMORY_IDX = 22;
+    public static final String TOTAL_RAM_MEMORY = "TOTAL_RAM_MEMORY";
+    public static final int TOTAL_RAM_MEMORY_IDX = 23;
+    public static final String IS_SUPERVISED = "IS_SUPERVISED";
+    public static final int IS_SUPERVISED_IDX = 24;
+    public static final String IS_MULTIUSER = "IS_MULTIUSER";
+    public static final int IS_MULTIUSER_IDX = 25;
+    public static final String IS_PROFILEOWNER = "IS_PROFILEOWNER";
+    public static final int IS_PROFILEOWNER_IDX = 26;
+    public static final String IS_DEVICE_LOCATOR_ENABLED = "IS_DEVICE_LOCATOR_ENABLED";
+    public static final int IS_DEVICE_LOCATOR_ENABLED_IDX = 27;
+    public static final String IS_ACTIVATION_LOCK_ENABLED = "IS_ACTIVATION_LOCK_ENABLED";
+    public static final int IS_ACTIVATION_LOCK_ENABLED_IDX = 28;
+    public static final String IS_DND_IN_EFFECT = "IS_DND_IN_EFFECT";
+    public static final int IS_DND_IN_EFFECT_IDX = 29;
+    public static final String IS_ITUNES_ACCOUNT_ACTIVE = "IS_ITUNES_ACCOUNT_ACTIVE";
+    public static final int IS_ITUNES_ACCOUNT_ACTIVE_IDX = 30;
+    public static final String EAS_DEVICE_IDENTIFIER = "EAS_DEVICE_IDENTIFIER";
+    public static final int EAS_DEVICE_IDENTIFIER_IDX = 31;
+    public static final String IS_CLOUD_BACKUP_ENABLED = "IS_CLOUD_BACKUP_ENABLED";
+    public static final int IS_CLOUD_BACKUP_ENABLED_IDX = 32;
+    public static final String LAST_CLOUD_BACKUP_DATE = "LAST_CLOUD_BACKUP_DATE";
+    public static final int LAST_CLOUD_BACKUP_DATE_IDX = 33;
+    public static final String GOOGLE_PLAY_SERVICE_ID = "GOOGLE_PLAY_SERVICE_ID";
+    public static final int GOOGLE_PLAY_SERVICE_ID_IDX = 34;
+    public static final String SECURITY_PATCH_VERSION = "SECURITY_PATCH_VERSION";
+    public static final int SECURITY_PATCH_VERSION_IDX = 35;
+    public static final String PROCESSOR_CORE_COUNT = "PROCESSOR_CORE_COUNT";
+    public static final int PROCESSOR_CORE_COUNT_IDX = 36;
+    public static final String PROCESSOR_NAME = "PROCESSOR_NAME";
+    public static final int PROCESSOR_NAME_IDX = 37;
+    
+    private MDDEVICEINFO() {
+    }
+}

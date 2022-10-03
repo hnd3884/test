@@ -1,0 +1,24 @@
+package com.me.devicemanagement.onpremise.webclient.message;
+
+public class HomePageMsgConstants
+{
+    public static final String SCHEDULED_BACKUP_FAILED = "SCHEDULED_BACKUP_FAILED";
+    public static final String PRODUCT_LICENSE_ABOUT_TO_EXPIRE = "PRODUCT_LICENSE_ABOUT_TO_EXPIRE";
+    public static final String PRODUCT_LICENSE_EXPIRED = "PRODUCT_LICENSE_EXPIRED";
+    public static final String PRODUCT_LICENSE_ABOUT_TO_EXPIRE_READ = "PRODUCT_LICENSE_ABOUT_TO_EXPIRE_READ";
+    public static final String PRODUCT_LICENSE_ABOUT_TO_EXPIRE_WRITE = "PRODUCT_LICENSE_ABOUT_TO_EXPIRE_WRITE";
+    public static final String PRODUCT_LICENSE_EXPIRED_READ = "PRODUCT_LICENSE_EXPIRED_READ";
+    public static final String PRODUCT_LICENSE_EXPIRED_WRITE = "PRODUCT_LICENSE_EXPIRED_WRITE";
+    public static final String DISK_SPACE_CRITICALLY_LOW = "DISK_SPACE_CRITICALLY_LOW";
+    public static final String LOW_DISK_SPACE_WARNING = "LOW_DISK_SPACE_WARNING";
+    public static final String NO_BACKUP_PERMISSION_WARNING = "NO_BACKUP_PERMISSION_WARNING";
+    public static final String RESTART_SERVER_PGCONF_RESET = "RESTART_SERVER_PGCONF_RESET";
+    public static final String PGCONF_RAM_EXCEEDS_SYSRAM = "PGCONF_RAM_EXCEEDS_SYSRAM";
+    public static final String PGCONF_FILE_MISSING = "PGCONF_FILE_MISSING";
+    public static final String MSSQL_TRANSACTOIN_LOG_LIMIT_EXCEED = "MSSQL_TRANSACTOIN_LOG_LIMIT_EXCEED";
+    public static final String SQL_DB_FILE_SYSTEM_MISMATCH = "SQL_DB_FILE_SYSTEM_MISMATCH";
+    public static final String MSSQL_TRANSACTION_LOG_NO_PERMISSION = "MSSQL_TRANSACTION_LOG_NO_PERMISSION";
+    public static final String MSSQL_TRANSACTION_LOG_CHANGE = "MSSQL_TRANSACTION_LOG_CHANGE";
+    public static final String ADMIN_EMAIL_UPDATION_NOTIFY = "ADMIN_EMAIL_UPDATION_NOTIFY";
+    public static final String TFA_ENABLING_ALERT = "TFA_ENABLING_ALERT";
+}

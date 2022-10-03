@@ -1,0 +1,52 @@
+package com.me.ems.framework.security.breachnotification.core;
+
+public class BreachNotificationConstants
+{
+    public static final int MAIL_SERVICE_OFF = 0;
+    public static final int MAIL_SERVICE_MODIFIED = 1;
+    public static final int MAIL_SERVICE_ON = 2;
+    public static final int HTTP_SUCCESS_CODE = 200;
+    public static final int CREATOR_POST_SUCCESS_CODE = 3000;
+    public static final int REVIEW_PERIOD_DURATION = 90;
+    public static final int BREACH_NOTIFICATION_DB_UPDATE_EVENT_ID = 11101;
+    public static final int BREACH_NOTIFICATION_CREATOR_UPDATE_SUCCESS_EVENT_ID = 11102;
+    public static final int BREACH_NOTIFICATION_CREATOR_UPDATE_FAILURE_EVENT_ID = 11103;
+    public static final int SECURITY_ADVISORY_STATUS_ADD = 0;
+    public static final int SECURITY_ADVISORY_STATUS_MODIFY = 1;
+    public static final int SECURITY_ADVISORY_STATUS_REVIEW = 2;
+    public static final int SECURITY_ADVISORY_STATUS_CREATOR_FAIL = 3;
+    public static final String EMAIL_FIELD = "Customer_Email";
+    public static final String IP_ADDRESS_FIELD = "IP_Address";
+    public static final String BUILD_VERSION_FIELD = "Build_Version";
+    public static final String INSTALLATION_ID_FIELD = "Installation_ID";
+    public static final String PRODUCT_NAME_FIELD = "Product_Name";
+    public static final String DOMAIN_FIELD = "Domain_Address";
+    public static final String LAST_UPDATE_TIME_FIELD = "Last_Update_Time";
+    public static final String ID_FIELD = "ID";
+    public static final String UNIQUE_ID_FIELD = "UniqueID";
+    public static final String JSON_KEY_EMAIL = "emailAddress";
+    public static final String JSON_KEY_NAT_ADDRESS = "natAddress";
+    public static final String JSON_KEY_BUILD_VERSION = "buildVersion";
+    public static final String JSON_KEY_LAST_UPDATE_TIME = "lastUpdateTime";
+    public static final String JSON_KEY_SECURITY_ADVISORY_STATUS = "securityAdvisoryStatus";
+    public static final String JSONAPI_KEY_DATA = "data";
+    public static final String JSONAPI_KEY_CODE = "code";
+    public static final String PRODUCT_CODE = "productcode";
+    public static final String BUILD_NUMBER = "buildnumber";
+    public static final String CREATOR_DATE_FORMAT = "dd-MMM-yyyy HH:mm:ss";
+    public static final String DC_SYSTEM_USER = "DC-SYSTEM-USER";
+    public static final String DEFAULT_UNIQUE_FORM_ID = "--";
+    public static final String DEFAULT_VALUE = "--";
+    public static final String JSON_KEY_EMAIL_ADDRESS = "emailAddress";
+    public static final String JSON_KEY_SEND_NOTIFICATION = "sendNotification";
+    public static final String JSON_KEY_NOTIFICATION_MESSAGE = "notificationMessage";
+    public static final String JSON_KEY_FORM_URL = "formUrl";
+    public static final String UPDATE_STATUS = "updateStatus";
+    public static final String MESSAGE_EMAIL_NOT_PRESENT = "Email Id not present";
+    public static final String MESSAGE_DETAILS_NOT_UPDATED = "Details Not Updated";
+    public static final String MESSAGE_DETAILS_UPDATED = "Details Updated";
+    public static final String FRAMEWORK_EXCEPTION_STRING = "Exception occurred at BreachNotificationFrameworkImpl";
+    public static final String ONPREMISE_EXCEPTION_STRING = "Exception occurred at BreachNotificationOnpremiseImpl";
+    public static final String UNKNOWNHOST_EXCEPTION_STRING = "UnknownHostException exception occurred ";
+    public static final String EXCEPTION_STRING = "Exception occurred in BreachNotificationService";
+}

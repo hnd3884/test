@@ -1,0 +1,23 @@
+package com.azul.crs.com.fasterxml.jackson.databind.jsontype.impl;
+
+import com.azul.crs.com.fasterxml.jackson.databind.jsontype.TypeSerializer;
+import com.azul.crs.com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.azul.crs.com.fasterxml.jackson.databind.BeanProperty;
+import com.azul.crs.com.fasterxml.jackson.databind.jsontype.TypeIdResolver;
+
+public class AsExistingPropertyTypeSerializer extends AsPropertyTypeSerializer
+{
+    public AsExistingPropertyTypeSerializer(final TypeIdResolver idRes, final BeanProperty property, final String propName) {
+        super(idRes, property, propName);
+    }
+    
+    @Override
+    public AsExistingPropertyTypeSerializer forProperty(final BeanProperty prop) {
+        return (this._property == prop) ? this : new AsExistingPropertyTypeSerializer(this._idResolver, prop, this._typePropertyName);
+    }
+    
+    @Override
+    public JsonTypeInfo.As getTypeInclusion() {
+        return JsonTypeInfo.As.EXISTING_PROPERTY;
+    }
+}

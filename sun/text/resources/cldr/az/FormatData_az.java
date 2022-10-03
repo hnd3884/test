@@ -1,0 +1,11 @@
+package sun.text.resources.cldr.az;
+
+import java.util.ListResourceBundle;
+
+public class FormatData_az extends ListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "MonthNames", { "Yanvar", "Fevral", "Mart", "Aprel", "May", "\u0130yun", "\u0130yul", "Avqust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr", "" } }, { "MonthAbbreviations", { "yan", "fev", "mar", "apr", "may", "iyn", "iyl", "avq", "sen", "okt", "noy", "dek", "" } }, { "DayNames", { "bazar", "bazar ert\u0259si", "\u00e7\u0259r\u015f\u0259nb\u0259 ax\u015fam\u0131", "\u00e7\u0259r\u015f\u0259nb\u0259", "c\u00fcm\u0259 ax\u015fam\u0131", "c\u00fcm\u0259", "\u015f\u0259nb\u0259" } }, { "DayAbbreviations", { "B.", "B.E.", "\u00c7.A.", "\u00c7.", "C.A.", "C", "\u015e." } }, { "DayNarrows", { "7", "1", "2", "3", "4", "5", "6" } }, { "QuarterNames", { "1-ci kvartal", "2-ci kvartal", "3-c\u00fc kvartal", "4-c\u00fc kvartal" } }, { "QuarterAbbreviations", { "1-ci kv.", "2-ci kv.", "3-c\u00fc kv.", "4-c\u00fc kv." } }, { "long.Eras", { "eram\u0131zdan \u0259vv\u0259l", "bizim eram\u0131z\u0131n" } }, { "Eras", { "e.\u0259.", "b.e." } }, { "field.era", "era" }, { "field.year", "il" }, { "field.month", "ay" }, { "field.week", "h\u0259ft\u0259" }, { "field.weekday", "h\u0259ft\u0259 g\u00fcn\u00fc" }, { "field.hour", "saat" }, { "field.minute", "d\u0259qiq\u0259" }, { "field.second", "saniy\u0259" }, { "field.zone", "zona" }, { "TimePatterns", { "HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm" } }, { "DatePatterns", { "EEEE, d, MMMM, y", "d MMMM , y", "d MMM, y", "yyyy-MM-dd" } }, { "calendarname.gregorian", "Qreqoriy t\u0259qvimi" }, { "calendarname.gregory", "Qreqoriy t\u0259qvimi" }, { "calendarname.roc", "\u00c7in respublikas\u0131 t\u0259qvimi" }, { "calendarname.islamic-civil", "Ivrit t\u0259qvimi" }, { "calendarname.islamicc", "Ivrit t\u0259qvimi" }, { "calendarname.japanese", "Yapon t\u0259qvimi" }, { "calendarname.buddhist", "Budist t\u0259qvimi" }, { "calendarname.islamic", "M\u00fcs\u0259lman t\u0259qvimi" }, { "DefaultNumberingSystem", "latn" }, { "latn.NumberElements", { ",", ".", ";", "%", "0", "#", "-", "E", "\u2030", "\u221e", "NaN" } }, { "NumberPatterns", { "#,##0.###", "да#,##0.00", "#,##0%" } } };
+    }
+}

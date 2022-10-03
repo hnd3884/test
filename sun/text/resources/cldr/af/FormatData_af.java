@@ -1,0 +1,11 @@
+package sun.text.resources.cldr.af;
+
+import java.util.ListResourceBundle;
+
+public class FormatData_af extends ListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "MonthNames", { "Januarie", "Februarie", "Maart", "April", "Mei", "Junie", "Julie", "Augustus", "September", "Oktober", "November", "Desember", "" } }, { "standalone.MonthNames", { "", "", "", "April", "", "", "", "", "", "", "", "", "" } }, { "MonthAbbreviations", { "Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Des", "" } }, { "MonthNarrows", { "J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D", "" } }, { "DayNames", { "Sondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrydag", "Saterdag" } }, { "DayAbbreviations", { "So", "Ma", "Di", "Wo", "Do", "Vr", "Sa" } }, { "DayNarrows", { "S", "M", "D", "W", "D", "V", "S" } }, { "QuarterNames", { "1ste kwartaal", "2de kwartaal", "3de kwartaal", "4de kwartaal" } }, { "QuarterAbbreviations", { "K1", "K2", "K3", "K4" } }, { "QuarterNarrows", { "1", "2", "3", "4" } }, { "AmPmMarkers", { "vm.", "nm." } }, { "long.Eras", { "voor Christus", "na Christus" } }, { "Eras", { "v.C.", "n.C." } }, { "field.era", "Era" }, { "field.year", "Jaar" }, { "field.month", "Maand" }, { "field.week", "Week" }, { "field.weekday", "Weeksdag" }, { "field.dayperiod", "AM/PM" }, { "field.hour", "Uur" }, { "field.minute", "Minuut" }, { "field.second", "Sekonde" }, { "field.zone", "Tydsone" }, { "TimePatterns", { "h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a" } }, { "DatePatterns", { "EEEE dd MMMM y", "dd MMMM y", "dd MMM y", "yyyy-MM-dd" } }, { "calendarname.islamic-civil", "Islamitiese siviele kalender" }, { "calendarname.islamicc", "Islamitiese siviele kalender" }, { "calendarname.gregorian", "Gregoriese kalender" }, { "calendarname.gregory", "Gregoriese kalender" }, { "calendarname.japanese", "Japannese kalender" }, { "calendarname.buddhist", "Boeddhistiese kalender" }, { "calendarname.islamic", "Islamitiese kalender" }, { "calendarname.roc", "Minguo-kalender" }, { "DefaultNumberingSystem", "latn" }, { "latn.NumberElements", { ",", " ", ";", "%", "0", "#", "-", "E", "\u2030", "\u221e", "NaN" } }, { "NumberPatterns", { "#,##0.###", "¤#,##0.00", "#,##0%" } } };
+    }
+}

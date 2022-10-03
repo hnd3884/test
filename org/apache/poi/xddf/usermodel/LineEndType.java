@@ -1,0 +1,32 @@
+package org.apache.poi.xddf.usermodel;
+
+import java.util.HashMap;
+import org.openxmlformats.schemas.drawingml.x2006.main.STLineEndType;
+
+public enum LineEndType
+{
+    ARROW(STLineEndType.ARROW), 
+    DIAMOND(STLineEndType.DIAMOND), 
+    NONE(STLineEndType.NONE), 
+    OVAL(STLineEndType.OVAL), 
+    STEALTH(STLineEndType.STEALTH), 
+    TRIANGLE(STLineEndType.TRIANGLE);
+    
+    final STLineEndType.Enum underlying;
+    private static final HashMap<STLineEndType.Enum, LineEndType> reverse;
+    
+    private LineEndType(final STLineEndType.Enum lineEnd) {
+        this.underlying = lineEnd;
+    }
+    
+    static LineEndType valueOf(final STLineEndType.Enum LineEndWidth) {
+        return LineEndType.reverse.get(LineEndWidth);
+    }
+    
+    static {
+        reverse = new HashMap<STLineEndType.Enum, LineEndType>();
+        for (final LineEndType value : values()) {
+            LineEndType.reverse.put(value.underlying, value);
+        }
+    }
+}

@@ -1,0 +1,51 @@
+package com.me.mdm.api.core.deviceaccounts;
+
+import com.me.mdm.api.error.APIHTTPException;
+import org.json.JSONObject;
+import com.me.mdm.api.APIRequest;
+import com.me.mdm.server.deviceaccounts.AccountFacade;
+import com.me.mdm.api.ApiRequestHandler;
+
+public class AccountConfigRequestHandler extends ApiRequestHandler
+{
+    AccountFacade account;
+    
+    public AccountConfigRequestHandler() {
+        this.account = null;
+        this.account = new AccountFacade();
+    }
+    
+    @Override
+    public Object doGet(final APIRequest request) throws APIHTTPException {
+        try {
+            final JSONObject response = new JSONObject();
+            response.put("status", 200);
+            request.urlStartKey = "configurations";
+            response.put("RESPONSE", (Object)this.account.getAllAccountConfiguration(request.toJSONObject()));
+            return response;
+        }
+        catch (final APIHTTPException e) {
+            throw e;
+        }
+        catch (final Exception e2) {
+            throw new APIHTTPException("COM0004", new Object[0]);
+        }
+    }
+    
+    @Override
+    public Object doPost(final APIRequest request) throws APIHTTPException {
+        try {
+            final JSONObject response = new JSONObject();
+            response.put("status", 200);
+            request.urlStartKey = "configurations";
+            response.put("RESPONSE", (Object)this.account.addOrModifyAccountConfiguration(request.toJSONObject()));
+            return response;
+        }
+        catch (final APIHTTPException e) {
+            throw e;
+        }
+        catch (final Exception e2) {
+            throw new APIHTTPException(400, null, new Object[0]);
+        }
+    }
+}

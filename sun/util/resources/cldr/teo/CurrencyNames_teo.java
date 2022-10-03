@@ -1,0 +1,11 @@
+package sun.util.resources.cldr.teo;
+
+import sun.util.resources.OpenListResourceBundle;
+
+public class CurrencyNames_teo extends OpenListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "UGX", "USh" }, { "aed", "Ango'otol lok' Falme za Kiarabu" }, { "aoa", "Ango'otol lok' Angola" }, { "aud", "Ango'otol lok' Australia" }, { "bhd", "Ango'otol lok' Bahareni" }, { "bif", "Ango'otol lok' Burundi" }, { "bwp", "Ango'otol lok' Botswana" }, { "cad", "Edola lok'Kanada" }, { "cdf", "Ango'otol lok' Kongo" }, { "chf", "Ango'otol lok' Uswisi" }, { "cny", "Ango'otol lok' China" }, { "cve", "Ango'otol lok' Kepuvede" }, { "djf", "Ango'otol lok' Jibuti" }, { "dzd", "Ango'otol lok' Aljeria" }, { "egp", "Epaunt lok' Misri" }, { "ern", "Ango'otol lok' Eritrea" }, { "etb", "Ango'otol lok' Uhabeshi" }, { "eur", "Yuro" }, { "gbp", "Epaunt lok' Uingereza" }, { "ghc", "Sedi ya Ghana" }, { "gmd", "Dalasi ya Gambia" }, { "gns", "Ango'otol lok' Gine" }, { "inr", "Ango'otol lok' India" }, { "jpy", "Ango'otol lok' Kijapani" }, { "kes", "Ango'otol lok' Kenya" }, { "kmf", "Ango'otol lok' Komoro" }, { "lrd", "edola lok' Liberia" }, { "lsl", "Ango'otol lok' Lesoto" }, { "lyd", "Ango'otol lok' Libya" }, { "mad", "Ango'otol lok' Moroko" }, { "mga", "Ango'otol lok' Bukini" }, { "mro", "Ango'otol lok' Moritania" }, { "mur", "Ango'otol lok' Morisi" }, { "mwk", "Ango'otol lok' Malawi" }, { "mzm", "Ango'otol lok' Msumbiji" }, { "nad", "Ango'otol lok' Namibia" }, { "ngn", "Ango'otol lok' Nijeria" }, { "rwf", "Ango'otol lok' Rwanda" }, { "sar", "Ango'otol lok' Saudia" }, { "scr", "Ango'otol lok' Shelisheli" }, { "sdg", "Epaunt Lok' Sudan" }, { "shp", "Ango'otol lok' Santahelena" }, { "sll", "Leoni" }, { "sos", "Ango'otol lok' Somalia" }, { "std", "Ango'otol lok' Sao Tome na Principe" }, { "szl", "Lilangeni" }, { "tnd", "Ango'otol lok' Tunisia" }, { "tzs", "Ango'otol lok' Tanzania" }, { "ugx", "Ango'otol lok' Uganda" }, { "usd", "edola lok' Amareka" }, { "xaf", "Ango'otol lok' CFA BEAC" }, { "xof", "Ango'otol lok' CFA BCEAO" }, { "zar", "Ango'otol lok' Afrika Kusini" }, { "zmk", "Ango'otol lok' Zambia" }, { "zwd", "Edola lok'Zimbabwe" } };
+    }
+}

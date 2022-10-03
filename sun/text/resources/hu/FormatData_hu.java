@@ -1,0 +1,11 @@
+package sun.text.resources.hu;
+
+import sun.util.resources.ParallelListResourceBundle;
+
+public class FormatData_hu extends ParallelListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "MonthNames", { "janu\u00e1r", "febru\u00e1r", "m\u00e1rcius", "\u00e1prilis", "m\u00e1jus", "j\u00fanius", "j\u00falius", "augusztus", "szeptember", "okt\u00f3ber", "november", "december", "" } }, { "standalone.MonthNames", { "janu\u00e1r", "febru\u00e1r", "m\u00e1rcius", "\u00e1prilis", "m\u00e1jus", "j\u00fanius", "j\u00falius", "augusztus", "szeptember", "okt\u00f3ber", "november", "december", "" } }, { "MonthAbbreviations", { "jan.", "febr.", "m\u00e1rc.", "\u00e1pr.", "m\u00e1j.", "j\u00fan.", "j\u00fal.", "aug.", "szept.", "okt.", "nov.", "dec.", "" } }, { "standalone.MonthAbbreviations", { "jan.", "febr.", "m\u00e1rc.", "\u00e1pr.", "m\u00e1j.", "j\u00fan.", "j\u00fal.", "aug.", "szept.", "okt.", "nov.", "dec.", "" } }, { "MonthNarrows", { "J", "F", "M", "\u00c1", "M", "J", "J", "A", "Sz", "O", "N", "D", "" } }, { "standalone.MonthNarrows", { "J", "F", "M", "\u00c1", "M", "J", "J", "A", "Sz", "O", "N", "D", "" } }, { "DayNames", { "vas\u00e1rnap", "h\u00e9tf\u0151", "kedd", "szerda", "cs\u00fct\u00f6rt\u00f6k", "p\u00e9ntek", "szombat" } }, { "standalone.DayNames", { "vas\u00e1rnap", "h\u00e9tf\u0151", "kedd", "szerda", "cs\u00fct\u00f6rt\u00f6k", "p\u00e9ntek", "szombat" } }, { "DayAbbreviations", { "V", "H", "K", "Sze", "Cs", "P", "Szo" } }, { "standalone.DayAbbreviations", { "V", "H", "K", "Sze", "Cs", "P", "Szo" } }, { "DayNarrows", { "V", "H", "K", "Sz", "Cs", "P", "Sz" } }, { "standalone.DayNarrows", { "V", "H", "K", "Sz", "Cs", "P", "Sz" } }, { "AmPmMarkers", { "DE", "DU" } }, { "Eras", { "i.e.", "i.u." } }, { "short.Eras", { "i. e.", "i. sz." } }, { "NumberElements", { ",", " ", ";", "%", "0", "#", "-", "E", "\u2030", "\u221e", "\ufffd" } }, { "TimePatterns", { "H:mm:ss z", "H:mm:ss z", "H:mm:ss", "H:mm" } }, { "DatePatterns", { "yyyy. MMMM d.", "yyyy. MMMM d.", "yyyy.MM.dd.", "yyyy.MM.dd." } }, { "DateTimePatterns", { "{1} {0}" } }, { "DateTimePatternChars", "GanjkHmsSEDFwWxhKzZ" }, { "buddhist.Eras", { "BC", "BK" } }, { "buddhist.short.Eras", { "BC", "BK" } } };
+    }
+}

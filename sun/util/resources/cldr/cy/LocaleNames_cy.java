@@ -1,0 +1,11 @@
+package sun.util.resources.cldr.cy;
+
+import sun.util.resources.OpenListResourceBundle;
+
+public class LocaleNames_cy extends OpenListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "CC", "Ynysoedd Cocos [Keeling]" }, { "GB", "Prydain Fawr" }, { "af", "Affricaneg" }, { "am", "Amhareg" }, { "ar", "Arabeg" }, { "as", "Asameg" }, { "be", "Belarwsiyn" }, { "bg", "Bwlgareg" }, { "bh", "Bihari" }, { "bn", "Bengali; Bangla" }, { "br", "Llydaweg" }, { "bs", "Bosnieg" }, { "ca", "Catalaneg" }, { "cs", "Tsiec" }, { "cy", "Cymraeg" }, { "da", "Daneg" }, { "de", "Almaeneg" }, { "el", "Groeg" }, { "en", "Saesneg" }, { "eo", "Esperanto" }, { "es", "Sbaeneg" }, { "et", "Estoneg" }, { "eu", "Basgeg" }, { "fa", "Persieg" }, { "fi", "Ffineg" }, { "fo", "Ffaroeg" }, { "fr", "Ffrangeg" }, { "ga", "Gwyddeleg" }, { "gd", "Gaeleg yr Alban" }, { "gl", "Galiseg" }, { "he", "Hebraeg" }, { "hi", "Hindi" }, { "hr", "Croateg" }, { "hu", "Hwngareg" }, { "hy", "Armeneg" }, { "ia", "Interlingua" }, { "id", "Indonesieg" }, { "ie", "Interlingue" }, { "is", "Islandeg" }, { "it", "Eidaleg" }, { "ja", "Siapaneeg" }, { "jv", "Jafanaeg" }, { "ka", "Georgeg" }, { "km", "Cambodieg" }, { "kn", "Kannada" }, { "ko", "Cor\u00ebeg" }, { "ku", "Cwrdeg" }, { "la", "Lladin" }, { "ln", "Lingala" }, { "lo", "Laoeg" }, { "lt", "Lithwaneg" }, { "lv", "Latfieg" }, { "ml", "Malayalam" }, { "mn", "Mongoleg" }, { "mr", "Marathi" }, { "ms", "Malai" }, { "mt", "Malteseg" }, { "ne", "Nepali" }, { "nl", "Iseldireg" }, { "nn", "Norwyeg (Nynorsk)" }, { "no", "Norwyeg" }, { "oc", "Ocsitaneg" }, { "or", "Oriya" }, { "pa", "Pwnjabi" }, { "pl", "Pwyleg" }, { "ps", "Pashto" }, { "pt", "Portiwgaleg" }, { "ro", "Rwmaneg" }, { "ru", "Rwsieg" }, { "sa", "Sansgrit" }, { "sd", "Sindhi" }, { "sh", "Serbo-Croateg" }, { "si", "Sinhaleg" }, { "sk", "Slofaceg" }, { "sl", "Slofeneg" }, { "so", "Somaleg" }, { "sq", "Albaneg" }, { "sr", "Serbeg" }, { "st", "Sesotheg" }, { "su", "Sundaneg" }, { "sv", "Swedeg" }, { "sw", "Swahili" }, { "ta", "Tamil" }, { "uk", "Wcreineg" }, { "uz", "Wsbeceg" }, { "vi", "Fietnameg" }, { "zh", "Tseineeg" }, { "zu", "Zwlw" }, { "fil", "Tagalog" }, { "tlh", "Klingon" }, { "und", "anh" }, { "Latn", "Lladin" } };
+    }
+}

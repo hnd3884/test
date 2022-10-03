@@ -1,0 +1,282 @@
+package org.eclipse.jdt.internal.compiler.parser;
+
+import java.util.Set;
+import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
+import org.eclipse.jdt.internal.compiler.ast.Statement;
+import org.eclipse.jdt.internal.compiler.ast.Initializer;
+import org.eclipse.jdt.internal.compiler.ast.LocalDeclaration;
+import org.eclipse.jdt.core.compiler.CharOperation;
+import org.eclipse.jdt.internal.compiler.lookup.TypeBinding;
+import org.eclipse.jdt.internal.compiler.ast.Block;
+import org.eclipse.jdt.internal.compiler.ast.FieldDeclaration;
+
+public class RecoveredInitializer extends RecoveredField implements TerminalTokens
+{
+    public RecoveredType[] localTypes;
+    public int localTypeCount;
+    public RecoveredBlock initializerBody;
+    int pendingModifiers;
+    int pendingModifersSourceStart;
+    RecoveredAnnotation[] pendingAnnotations;
+    int pendingAnnotationCount;
+    
+    public RecoveredInitializer(final FieldDeclaration fieldDeclaration, final RecoveredElement parent, final int bracketBalance) {
+        this(fieldDeclaration, parent, bracketBalance, null);
+    }
+    
+    public RecoveredInitializer(final FieldDeclaration fieldDeclaration, final RecoveredElement parent, final int bracketBalance, final Parser parser) {
+        super(fieldDeclaration, parent, bracketBalance, parser);
+        this.pendingModifersSourceStart = -1;
+        this.foundOpeningBrace = true;
+    }
+    
+    @Override
+    public RecoveredElement add(final Block nestedBlockDeclaration, final int bracketBalanceValue) {
+        if (this.fieldDeclaration.declarationSourceEnd > 0 && nestedBlockDeclaration.sourceStart > this.fieldDeclaration.declarationSourceEnd) {
+            this.resetPendingModifiers();
+            if (this.parent == null) {
+                return this;
+            }
+            return this.parent.add(nestedBlockDeclaration, bracketBalanceValue);
+        }
+        else {
+            if (!this.foundOpeningBrace) {
+                this.foundOpeningBrace = true;
+                ++this.bracketBalance;
+            }
+            this.initializerBody = new RecoveredBlock(nestedBlockDeclaration, this, bracketBalanceValue);
+            if (nestedBlockDeclaration.sourceEnd == 0) {
+                return this.initializerBody;
+            }
+            return this;
+        }
+    }
+    
+    @Override
+    public RecoveredElement add(final FieldDeclaration newFieldDeclaration, final int bracketBalanceValue) {
+        this.resetPendingModifiers();
+        final char[][] fieldTypeName;
+        if ((newFieldDeclaration.modifiers & 0xFFFFFFEF) != 0x0 || newFieldDeclaration.type == null || ((fieldTypeName = newFieldDeclaration.type.getTypeName()).length == 1 && CharOperation.equals(fieldTypeName[0], TypeBinding.VOID.sourceName()))) {
+            if (this.parent == null) {
+                return this;
+            }
+            this.updateSourceEndIfNecessary(this.previousAvailableLineEnd(newFieldDeclaration.declarationSourceStart - 1));
+            return this.parent.add(newFieldDeclaration, bracketBalanceValue);
+        }
+        else {
+            if (this.fieldDeclaration.declarationSourceEnd <= 0 || newFieldDeclaration.declarationSourceStart <= this.fieldDeclaration.declarationSourceEnd) {
+                return this;
+            }
+            if (this.parent == null) {
+                return this;
+            }
+            return this.parent.add(newFieldDeclaration, bracketBalanceValue);
+        }
+    }
+    
+    @Override
+    public RecoveredElement add(final LocalDeclaration localDeclaration, final int bracketBalanceValue) {
+        if (this.fieldDeclaration.declarationSourceEnd == 0 || localDeclaration.declarationSourceStart <= this.fieldDeclaration.declarationSourceEnd) {
+            final Block block = new Block(0);
+            block.sourceStart = ((Initializer)this.fieldDeclaration).sourceStart;
+            final RecoveredElement element = this.add(block, 1);
+            if (this.initializerBody != null) {
+                this.initializerBody.attachPendingModifiers(this.pendingAnnotations, this.pendingAnnotationCount, this.pendingModifiers, this.pendingModifersSourceStart);
+            }
+            this.resetPendingModifiers();
+            return element.add(localDeclaration, bracketBalanceValue);
+        }
+        this.resetPendingModifiers();
+        if (this.parent == null) {
+            return this;
+        }
+        return this.parent.add(localDeclaration, bracketBalanceValue);
+    }
+    
+    @Override
+    public RecoveredElement add(final Statement statement, final int bracketBalanceValue) {
+        if (this.fieldDeclaration.declarationSourceEnd == 0 || statement.sourceStart <= this.fieldDeclaration.declarationSourceEnd) {
+            final Block block = new Block(0);
+            block.sourceStart = ((Initializer)this.fieldDeclaration).sourceStart;
+            final RecoveredElement element = this.add(block, 1);
+            if (this.initializerBody != null) {
+                this.initializerBody.attachPendingModifiers(this.pendingAnnotations, this.pendingAnnotationCount, this.pendingModifiers, this.pendingModifersSourceStart);
+            }
+            this.resetPendingModifiers();
+            return element.add(statement, bracketBalanceValue);
+        }
+        this.resetPendingModifiers();
+        if (this.parent == null) {
+            return this;
+        }
+        return this.parent.add(statement, bracketBalanceValue);
+    }
+    
+    @Override
+    public RecoveredElement add(final TypeDeclaration typeDeclaration, final int bracketBalanceValue) {
+        if (this.fieldDeclaration.declarationSourceEnd != 0 && typeDeclaration.declarationSourceStart > this.fieldDeclaration.declarationSourceEnd) {
+            this.resetPendingModifiers();
+            if (this.parent == null) {
+                return this;
+            }
+            return this.parent.add(typeDeclaration, bracketBalanceValue);
+        }
+        else {
+            if ((typeDeclaration.bits & 0x100) != 0x0 || this.parser().methodRecoveryActivated || this.parser().statementRecoveryActivated) {
+                final Block block = new Block(0);
+                block.sourceStart = ((Initializer)this.fieldDeclaration).sourceStart;
+                final RecoveredElement element = this.add(block, 1);
+                if (this.initializerBody != null) {
+                    this.initializerBody.attachPendingModifiers(this.pendingAnnotations, this.pendingAnnotationCount, this.pendingModifiers, this.pendingModifersSourceStart);
+                }
+                this.resetPendingModifiers();
+                return element.add(typeDeclaration, bracketBalanceValue);
+            }
+            if (this.localTypes == null) {
+                this.localTypes = new RecoveredType[5];
+                this.localTypeCount = 0;
+            }
+            else if (this.localTypeCount == this.localTypes.length) {
+                System.arraycopy(this.localTypes, 0, this.localTypes = new RecoveredType[2 * this.localTypeCount], 0, this.localTypeCount);
+            }
+            final RecoveredType element2 = new RecoveredType(typeDeclaration, this, bracketBalanceValue);
+            this.localTypes[this.localTypeCount++] = element2;
+            if (this.pendingAnnotationCount > 0) {
+                element2.attach(this.pendingAnnotations, this.pendingAnnotationCount, this.pendingModifiers, this.pendingModifersSourceStart);
+            }
+            this.resetPendingModifiers();
+            if (!this.foundOpeningBrace) {
+                this.foundOpeningBrace = true;
+                ++this.bracketBalance;
+            }
+            return element2;
+        }
+    }
+    
+    @Override
+    public RecoveredElement addAnnotationName(final int identifierPtr, final int identifierLengthPtr, final int annotationStart, final int bracketBalanceValue) {
+        if (this.pendingAnnotations == null) {
+            this.pendingAnnotations = new RecoveredAnnotation[5];
+            this.pendingAnnotationCount = 0;
+        }
+        else if (this.pendingAnnotationCount == this.pendingAnnotations.length) {
+            System.arraycopy(this.pendingAnnotations, 0, this.pendingAnnotations = new RecoveredAnnotation[2 * this.pendingAnnotationCount], 0, this.pendingAnnotationCount);
+        }
+        final RecoveredAnnotation element = new RecoveredAnnotation(identifierPtr, identifierLengthPtr, annotationStart, this, bracketBalanceValue);
+        return this.pendingAnnotations[this.pendingAnnotationCount++] = element;
+    }
+    
+    @Override
+    public void addModifier(final int flag, final int modifiersSourceStart) {
+        this.pendingModifiers |= flag;
+        if (this.pendingModifersSourceStart < 0) {
+            this.pendingModifersSourceStart = modifiersSourceStart;
+        }
+    }
+    
+    @Override
+    public void resetPendingModifiers() {
+        this.pendingAnnotations = null;
+        this.pendingAnnotationCount = 0;
+        this.pendingModifiers = 0;
+        this.pendingModifersSourceStart = -1;
+    }
+    
+    @Override
+    public String toString(final int tab) {
+        final StringBuffer result = new StringBuffer(this.tabString(tab));
+        result.append("Recovered initializer:\n");
+        this.fieldDeclaration.print(tab + 1, result);
+        if (this.annotations != null) {
+            for (int i = 0; i < this.annotationCount; ++i) {
+                result.append("\n");
+                result.append(this.annotations[i].toString(tab + 1));
+            }
+        }
+        if (this.initializerBody != null) {
+            result.append("\n");
+            result.append(this.initializerBody.toString(tab + 1));
+        }
+        return result.toString();
+    }
+    
+    @Override
+    public FieldDeclaration updatedFieldDeclaration(final int depth, final Set<TypeDeclaration> knownTypes) {
+        if (this.initializerBody != null) {
+            final Block block = this.initializerBody.updatedBlock(depth, knownTypes);
+            if (block != null) {
+                final Initializer initializer = (Initializer)this.fieldDeclaration;
+                initializer.block = block;
+                if (initializer.declarationSourceEnd == 0) {
+                    initializer.declarationSourceEnd = block.sourceEnd;
+                    initializer.bodyEnd = block.sourceEnd;
+                }
+            }
+            if (this.localTypeCount > 0) {
+                final FieldDeclaration fieldDeclaration = this.fieldDeclaration;
+                fieldDeclaration.bits |= 0x2;
+            }
+        }
+        if (this.fieldDeclaration.sourceEnd == 0) {
+            this.fieldDeclaration.sourceEnd = this.fieldDeclaration.declarationSourceEnd;
+        }
+        return this.fieldDeclaration;
+    }
+    
+    @Override
+    public RecoveredElement updateOnClosingBrace(final int braceStart, final int braceEnd) {
+        final int bracketBalance = this.bracketBalance - 1;
+        this.bracketBalance = bracketBalance;
+        if (bracketBalance <= 0 && this.parent != null) {
+            this.updateSourceEndIfNecessary(braceStart, braceEnd);
+            return this.parent;
+        }
+        return this;
+    }
+    
+    @Override
+    public RecoveredElement updateOnOpeningBrace(final int braceStart, final int braceEnd) {
+        ++this.bracketBalance;
+        return this;
+    }
+    
+    @Override
+    public void updateSourceEndIfNecessary(final int braceStart, final int braceEnd) {
+        if (this.fieldDeclaration.declarationSourceEnd == 0) {
+            final Initializer initializer = (Initializer)this.fieldDeclaration;
+            if (this.parser().rBraceSuccessorStart >= braceEnd) {
+                if (initializer.bodyStart < this.parser().rBraceEnd) {
+                    initializer.declarationSourceEnd = this.parser().rBraceEnd;
+                }
+                else {
+                    initializer.declarationSourceEnd = initializer.bodyStart;
+                }
+                if (initializer.bodyStart < this.parser().rBraceStart) {
+                    initializer.bodyEnd = this.parser().rBraceStart;
+                }
+                else {
+                    initializer.bodyEnd = initializer.bodyStart;
+                }
+            }
+            else {
+                if (braceEnd < initializer.declarationSourceStart) {
+                    initializer.declarationSourceEnd = initializer.declarationSourceStart;
+                    initializer.bodyEnd = initializer.declarationSourceEnd;
+                }
+                else {
+                    initializer.declarationSourceEnd = braceEnd;
+                    initializer.bodyEnd = braceStart - 1;
+                }
+                if (initializer.bodyStart > initializer.declarationSourceEnd) {
+                    initializer.bodyStart = initializer.declarationSourceEnd;
+                    if (initializer.block != null) {
+                        initializer.block.sourceStart = initializer.declarationSourceStart;
+                    }
+                }
+            }
+            if (initializer.block != null) {
+                initializer.block.sourceEnd = initializer.declarationSourceEnd;
+            }
+        }
+    }
+}

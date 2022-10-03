@@ -1,0 +1,50 @@
+package com.me.mdm.server.agent;
+
+public class AgentCommServlets
+{
+    public static final String AdminAppDownloadServlet = "/mdm/admin/app";
+    public static final String AgentDownloadServlet = "/mdm/app";
+    public static final String EnrollServlet = "/mdm/enroll";
+    public static final String AC_SERVICE_CONFIG_SERVLET = "/mdm/client/v1/ios/MDMServiceConfig";
+    public static final String DefaultAppCatalogWebclip_1_0 = "/showAppsList.mobapps";
+    public static final String IOSCheckInServlet_1_0 = "/ioscheckin";
+    public static final String IOSServerServlet_1_0 = "/iosserver";
+    public static final String MDMLogUploaderServlet_1_0 = "/mdm/mdmLogUploader";
+    public static final String WpServerServlet_1_0 = "/mdm/wpserver";
+    public static final String AndroidAdminAuthServlet_2_0 = "/mdm/client/v1/auth";
+    public static final String AndroidAdminCmdServlet_2_0 = "/mdm/client/v1/admin/cmd";
+    public static final String AndroidAdminMsgServlet_2_0 = "/mdm/client/v1/admin/msg";
+    public static final String AndroidCheckinServlet_2_0 = "/mdm/client/v1/androidcheckin";
+    public static final String AndroidNativeAppServlet_2_0 = "/mdm/client/v1/androidnativeapp";
+    public static final String AppleConfigServlet_2_0 = "/mdm/client/v1/ios/ac/";
+    public static final String AC_TRUST_CERT_SERVLET_2_0 = "/mdm/client/v1/ios/trustcert";
+    public static final String AC_TRUST_PROFILE_SERVLET_2_0 = "/mdm/client/v1/ios/trustprofile";
+    public static final String DefaultAppCatalogWebclip_2_0 = "/showAppsList.mobileapps";
+    public static final String DEPServlet_2_0 = "/mdm/client/v1/dep";
+    public static final String DeviceRegistrationServlet_2_0 = "/mdm/client/v1/drs";
+    public static final String IOSCheckInServlet_2_0 = "/mdm/client/v1/ioscheckin";
+    public static final String MAC_CHECK_IN_SERVLET_2_0 = "/mdm/client/v1/maccheckin";
+    public static final String IOS_SHARED_IPAD_CHECKIN_SERVLET_2_0 = "/mdm/client/v1/sharedipadcheckin";
+    public static final String IOS_SHARED_IPAD_SERVER_SERVLET_2_0 = "/mdm/client/v1/sharedipadserver";
+    public static final String APPLETV_CHECK_IN_SERVLET_2_0 = "/mdm/client/v1/appletvcheckin";
+    public static final String IOSDEPServlet_2_0 = "/mdm/client/v1/ios/dep/";
+    public static final String ModernMacEnrollmentServlet = "/mdm/client/v1/modern/mac/";
+    public static final String IOSServerServlet_2_0 = "/mdm/client/v1/iosserver";
+    public static final String MAC_SERVER_SERVLET_2_0 = "/mdm/client/v1/macserver";
+    public static final String APPLETV_SERVER_SERVLET_2_0 = "/mdm/client/v1/appletvserver";
+    public static final String MDMLogUploaderServlet_2_0 = "/mdm/client/v1/mdmLogUploader";
+    public static final String SafeCheckinServlet_2_0 = "/mdm/client/v1/safecheckin";
+    public static final String FILE_UPLOAD_SERVLET = "/mdm/client/v1/fileupload";
+    public static final String WpCheckinServlet_2_0 = "/mdm/client/v1/wpcheckin";
+    public static final String WpDiscoverServlet_2_0 = "/mdm/client/v1/wpdiscover/";
+    public static final String WpICDDiscoverServlet_2_0 = "/mdm/client/v1/wpdiscover/admin/";
+    public static final String WpServerServlet_2_0 = "/mdm/client/v1/wpserver";
+    public static final String WP_TERMS_OF_USE_SERVLET_2_0 = "/mdm/client/v1/wptermsofuse/";
+    public static final String WP_AZURE_AD_DISCOVER_SERVLET_3_0 = "/mdm/client/v2/wpdiscover/admin/";
+    public static final String WP_AZURE_AD_DISCOVER_UNAUTHENTICATED_0 = "/mdm/client/v0/wpdiscover/admin/";
+    public static final String WP_CHECKIN_SERVLET_3_0 = "/mdm/client/v2/wpcheckin";
+    public static final String IOSNativeAppServlet_2_0 = "/mdm/client/v1/nativeappserver";
+    public static final String MACNATIVEAPPSERVLET_2_0 = "/mdm/client/v1/macnativeappserver";
+    public static final String DOC_SERVLET = "/mdm/client/v1/docs";
+    public static final String ANDROID_EMM_QR_CODE_SERVELET = "/mdm/client/v1/androidemmtoken";
+}

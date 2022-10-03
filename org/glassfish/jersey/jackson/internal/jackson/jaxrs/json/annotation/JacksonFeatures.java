@@ -1,0 +1,23 @@
+package org.glassfish.jersey.jackson.internal.jackson.jaxrs.json.annotation;
+
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.annotation.JacksonAnnotation;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Retention;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Target;
+
+@Target({ ElementType.ANNOTATION_TYPE, ElementType.METHOD })
+@Retention(RetentionPolicy.RUNTIME)
+@JacksonAnnotation
+@Deprecated
+public @interface JacksonFeatures {
+    DeserializationFeature[] deserializationEnable() default {};
+    
+    DeserializationFeature[] deserializationDisable() default {};
+    
+    SerializationFeature[] serializationEnable() default {};
+    
+    SerializationFeature[] serializationDisable() default {};
+}

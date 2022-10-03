@@ -1,0 +1,52 @@
+package com.adventnet.sym.server.mdm.util;
+
+public class DynamicConstants
+{
+    public static final String DY_SERVER_NAME = "%ServerName%";
+    public static final String DY_SERVER_PORT = "%ServerPort%";
+    public static final String DY_UDID = "%udid%";
+    public static final String DY_DEVICE_UDID = "%deviceudid%";
+    public static final String DY_RESOURCE_ID = "%resourceid%";
+    public static final String DY_LANGUAGE_PACK_ENABLED = "%license_pack_enabled%";
+    public static final String DY_ENROLLMENT_REQ_ID = "%erid%";
+    public static final String DEVICE_NAME = "%device_name%";
+    public static final String DY_DEVICE_AUTH_TOKEN = "%device_authtoken%";
+    public static final String DY_AUTH_TOKEN = "%authtoken%";
+    public static final String DY_DEVICE_SCOPE = "%device_SCOPE%";
+    public static final String DY_DEVICE_NAME = "%devicename%";
+    public static final String DY_PROFILE_ID = "%profileId%";
+    public static final String DY_USER_NAME = "%username%";
+    public static final String DY_UPN = "%upn%";
+    public static final String DY_EMAIL = "%email%";
+    public static final String DY_DOMAIN_NAME = "%domainname%";
+    public static final String DY_SERIAL_NUMBER = "%serialnumber%";
+    public static final String DY_IMEI = "%imei%";
+    public static final String DY_EAS_ID = "%easid%";
+    public static final String DY_APN_USER_NAME = "%apn_username%";
+    public static final String DY_APN_PASSWORD = "%apn_password%";
+    public static final String DY_APN_IDENTIFIER = "%apn_identifier%";
+    public static final String DY_FIRST_NAME = "%firstname%";
+    public static final String DY_MIDDLE_NAME = "%middlename%";
+    public static final String DY_LAST_NAME = "%lastname%";
+    public static final String DY_DISPLAY_NAME = "%displayname%";
+    public static final String DY_TOKEN_NAME = "%token_name%";
+    public static final String DY_TOKEN_VALUE = "%token_value%";
+    public static final String DY_SERVICES_DICT = "%services%";
+    public static final String DY_SCHEDULE_OS_UPDATE = "%os_prodkey%";
+    public static final String DY_ASSET_TAG = "%asset_tag%";
+    public static final String DY_ASSET_OWNER = "%asset_owner%";
+    public static final String DY_OFFICE = "%office%";
+    public static final String DY_GROUP = "%group%";
+    public static final String DY_ORGANIZATION = "%organization_name%";
+    public static final String DY_DEVICE_MODEL = "%model%";
+    public static final String DY_DEVICE_NUMBER = "%dev icenumber%";
+    public static final String DY_SCHEDULE_OS_VERSION = "%os_version%";
+    public static final String DY_WIFI_MAC = "%wifi_mac%";
+    public static final String DY_ETHERNET_MAC = "%ethernet_mac%";
+    public static final String DY_BLUETOOTH_MAC = "%bluetooth_mac%";
+    public static final String DY_CHALLENGE_PASSWORD = "%challenge_password%";
+    public static final String DY_ZEROTRUST_SAN = "%zerotrust_san%";
+    public static final String DY_ZEROTRUST_PASSWORD = "%zerotrust_password%";
+    public static final String DY_ANNOUNCEMENT_DISTRIBUTED_TIME = "%last_distributred_time%";
+    public static final String DY_FILEVAULT_PERSONAL_RECOVEY_KEY = "%filevault_personal_recovery_key%";
+}

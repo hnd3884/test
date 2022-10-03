@@ -1,0 +1,11 @@
+package sun.text.resources.cldr.bs;
+
+import java.util.ListResourceBundle;
+
+public class FormatData_bs extends ListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "MonthNames", { "januar", "februar", "mart", "april", "maj", "juni", "juli", "avgust", "septembar", "oktobar", "novembar", "decembar", "" } }, { "MonthAbbreviations", { "jan", "feb", "mar", "apr", "maj", "jun", "jul", "avg", "sep", "okt", "nov", "dec", "" } }, { "MonthNarrows", { "j", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d", "" } }, { "DayNames", { "nedjelja", "ponedjeljak", "utorak", "srijeda", "\u010detvrtak", "petak", "subota" } }, { "DayAbbreviations", { "ned", "pon", "uto", "sri", "\u010det", "pet", "sub" } }, { "QuarterNames", { "Prvi kvartal", "Drugi kvartal", "Tre\u0107i kvartal", "\u010cetvrti kvartal" } }, { "QuarterAbbreviations", { "K1", "K2", "K3", "K4" } }, { "AmPmMarkers", { "pre podne", "popodne" } }, { "long.Eras", { "Pre nove ere", "Nove ere" } }, { "Eras", { "p. n. e.", "n. e" } }, { "field.era", "era" }, { "field.year", "godina" }, { "field.month", "mesec" }, { "field.week", "nedelja" }, { "field.weekday", "dan u nedelji" }, { "field.dayperiod", "pre podne/ popodne" }, { "field.hour", "\u010das" }, { "field.minute", "minut" }, { "field.second", "sekund" }, { "field.zone", "zona" }, { "TimePatterns", { "HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm" } }, { "DatePatterns", { "EEEE, dd. MMMM y.", "dd. MMMM y.", "dd.MM.y.", "dd.MM.yy." } }, { "islamic.Eras", { "", "AH" } }, { "java.time.islamic.DatePatterns", { "EEEE, dd. MMMM y. G", "dd. MMMM y. G", "dd.MM.y. G", "dd.MM.y. G" } }, { "islamic.DatePatterns", { "EEEE, dd. MMMM y. GGGG", "dd. MMMM y. GGGG", "dd.MM.y. GGGG", "dd.MM.y. GGGG" } }, { "calendarname.islamic-civil", "Islamski civilni kalendar" }, { "calendarname.islamicc", "Islamski civilni kalendar" }, { "calendarname.buddhist", "Budisti\u010dki kalendar" }, { "calendarname.islamic", "Islamski kalendar" }, { "calendarname.gregorian", "Gregorijanski kalendar" }, { "calendarname.gregory", "Gregorijanski kalendar" }, { "calendarname.roc", "Kalendar Republike Kine" }, { "calendarname.japanese", "Japanski kalendar" }, { "DefaultNumberingSystem", "latn" }, { "latn.NumberElements", { ",", ".", ";", "%", "0", "#", "-", "E", "\u2030", "\u221e", "NaN" } } };
+    }
+}

@@ -1,0 +1,110 @@
+package org.bouncycastle.crypto.examples;
+
+import org.bouncycastle.crypto.CryptoException;
+import org.bouncycastle.crypto.agreement.jpake.JPAKERound3Payload;
+import org.bouncycastle.crypto.agreement.jpake.JPAKERound2Payload;
+import org.bouncycastle.crypto.agreement.jpake.JPAKERound1Payload;
+import java.math.BigInteger;
+import org.bouncycastle.crypto.agreement.jpake.JPAKEPrimeOrderGroup;
+import org.bouncycastle.crypto.Digest;
+import org.bouncycastle.crypto.agreement.jpake.JPAKEParticipant;
+import java.security.SecureRandom;
+import org.bouncycastle.crypto.digests.SHA256Digest;
+import org.bouncycastle.crypto.agreement.jpake.JPAKEPrimeOrderGroups;
+
+public class JPAKEExample
+{
+    public static void main(final String[] array) throws CryptoException {
+        final JPAKEPrimeOrderGroup nist_3072 = JPAKEPrimeOrderGroups.NIST_3072;
+        final BigInteger p = nist_3072.getP();
+        final BigInteger q = nist_3072.getQ();
+        final BigInteger g = nist_3072.getG();
+        final String s = "password";
+        final String s2 = "password";
+        System.out.println("********* Initialization **********");
+        System.out.println("Public parameters for the cyclic group:");
+        System.out.println("p (" + p.bitLength() + " bits): " + p.toString(16));
+        System.out.println("q (" + q.bitLength() + " bits): " + q.toString(16));
+        System.out.println("g (" + p.bitLength() + " bits): " + g.toString(16));
+        System.out.println("p mod q = " + p.mod(q).toString(16));
+        System.out.println("g^{q} mod p = " + g.modPow(q, p).toString(16));
+        System.out.println("");
+        System.out.println("(Secret passwords used by Alice and Bob: \"" + s + "\" and \"" + s2 + "\")\n");
+        final SHA256Digest sha256Digest = new SHA256Digest();
+        final SecureRandom secureRandom = new SecureRandom();
+        final JPAKEParticipant jpakeParticipant = new JPAKEParticipant("alice", s.toCharArray(), nist_3072, sha256Digest, secureRandom);
+        final JPAKEParticipant jpakeParticipant2 = new JPAKEParticipant("bob", s2.toCharArray(), nist_3072, sha256Digest, secureRandom);
+        final JPAKERound1Payload round1PayloadToSend = jpakeParticipant.createRound1PayloadToSend();
+        final JPAKERound1Payload round1PayloadToSend2 = jpakeParticipant2.createRound1PayloadToSend();
+        System.out.println("************ Round 1 **************");
+        System.out.println("Alice sends to Bob: ");
+        System.out.println("g^{x1}=" + round1PayloadToSend.getGx1().toString(16));
+        System.out.println("g^{x2}=" + round1PayloadToSend.getGx2().toString(16));
+        System.out.println("KP{x1}={" + round1PayloadToSend.getKnowledgeProofForX1()[0].toString(16) + "};{" + round1PayloadToSend.getKnowledgeProofForX1()[1].toString(16) + "}");
+        System.out.println("KP{x2}={" + round1PayloadToSend.getKnowledgeProofForX2()[0].toString(16) + "};{" + round1PayloadToSend.getKnowledgeProofForX2()[1].toString(16) + "}");
+        System.out.println("");
+        System.out.println("Bob sends to Alice: ");
+        System.out.println("g^{x3}=" + round1PayloadToSend2.getGx1().toString(16));
+        System.out.println("g^{x4}=" + round1PayloadToSend2.getGx2().toString(16));
+        System.out.println("KP{x3}={" + round1PayloadToSend2.getKnowledgeProofForX1()[0].toString(16) + "};{" + round1PayloadToSend2.getKnowledgeProofForX1()[1].toString(16) + "}");
+        System.out.println("KP{x4}={" + round1PayloadToSend2.getKnowledgeProofForX2()[0].toString(16) + "};{" + round1PayloadToSend2.getKnowledgeProofForX2()[1].toString(16) + "}");
+        System.out.println("");
+        jpakeParticipant.validateRound1PayloadReceived(round1PayloadToSend2);
+        System.out.println("Alice checks g^{x4}!=1: OK");
+        System.out.println("Alice checks KP{x3}: OK");
+        System.out.println("Alice checks KP{x4}: OK");
+        System.out.println("");
+        jpakeParticipant2.validateRound1PayloadReceived(round1PayloadToSend);
+        System.out.println("Bob checks g^{x2}!=1: OK");
+        System.out.println("Bob checks KP{x1},: OK");
+        System.out.println("Bob checks KP{x2},: OK");
+        System.out.println("");
+        final JPAKERound2Payload round2PayloadToSend = jpakeParticipant.createRound2PayloadToSend();
+        final JPAKERound2Payload round2PayloadToSend2 = jpakeParticipant2.createRound2PayloadToSend();
+        System.out.println("************ Round 2 **************");
+        System.out.println("Alice sends to Bob: ");
+        System.out.println("A=" + round2PayloadToSend.getA().toString(16));
+        System.out.println("KP{x2*s}={" + round2PayloadToSend.getKnowledgeProofForX2s()[0].toString(16) + "},{" + round2PayloadToSend.getKnowledgeProofForX2s()[1].toString(16) + "}");
+        System.out.println("");
+        System.out.println("Bob sends to Alice");
+        System.out.println("B=" + round2PayloadToSend2.getA().toString(16));
+        System.out.println("KP{x4*s}={" + round2PayloadToSend2.getKnowledgeProofForX2s()[0].toString(16) + "},{" + round2PayloadToSend2.getKnowledgeProofForX2s()[1].toString(16) + "}");
+        System.out.println("");
+        jpakeParticipant.validateRound2PayloadReceived(round2PayloadToSend2);
+        System.out.println("Alice checks KP{x4*s}: OK\n");
+        jpakeParticipant2.validateRound2PayloadReceived(round2PayloadToSend);
+        System.out.println("Bob checks KP{x2*s}: OK\n");
+        final BigInteger calculateKeyingMaterial = jpakeParticipant.calculateKeyingMaterial();
+        final BigInteger calculateKeyingMaterial2 = jpakeParticipant2.calculateKeyingMaterial();
+        System.out.println("********* After round 2 ***********");
+        System.out.println("Alice computes key material \t K=" + calculateKeyingMaterial.toString(16));
+        System.out.println("Bob computes key material \t K=" + calculateKeyingMaterial2.toString(16));
+        System.out.println();
+        deriveSessionKey(calculateKeyingMaterial);
+        deriveSessionKey(calculateKeyingMaterial2);
+        final JPAKERound3Payload round3PayloadToSend = jpakeParticipant.createRound3PayloadToSend(calculateKeyingMaterial);
+        final JPAKERound3Payload round3PayloadToSend2 = jpakeParticipant2.createRound3PayloadToSend(calculateKeyingMaterial2);
+        System.out.println("************ Round 3 **************");
+        System.out.println("Alice sends to Bob: ");
+        System.out.println("MacTag=" + round3PayloadToSend.getMacTag().toString(16));
+        System.out.println("");
+        System.out.println("Bob sends to Alice: ");
+        System.out.println("MacTag=" + round3PayloadToSend2.getMacTag().toString(16));
+        System.out.println("");
+        jpakeParticipant.validateRound3PayloadReceived(round3PayloadToSend2, calculateKeyingMaterial);
+        System.out.println("Alice checks MacTag: OK\n");
+        jpakeParticipant2.validateRound3PayloadReceived(round3PayloadToSend, calculateKeyingMaterial2);
+        System.out.println("Bob checks MacTag: OK\n");
+        System.out.println();
+        System.out.println("MacTags validated, therefore the keying material matches.");
+    }
+    
+    private static BigInteger deriveSessionKey(final BigInteger bigInteger) {
+        final SHA256Digest sha256Digest = new SHA256Digest();
+        final byte[] byteArray = bigInteger.toByteArray();
+        final byte[] array = new byte[sha256Digest.getDigestSize()];
+        sha256Digest.update(byteArray, 0, byteArray.length);
+        sha256Digest.doFinal(array, 0);
+        return new BigInteger(array);
+    }
+}

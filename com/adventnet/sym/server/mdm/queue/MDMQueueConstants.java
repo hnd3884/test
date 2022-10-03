@@ -1,0 +1,94 @@
+package com.adventnet.sym.server.mdm.queue;
+
+import com.me.devicemanagement.framework.server.queue.DCQueueConstants;
+
+public class MDMQueueConstants implements DCQueueConstants
+{
+    public static final String QUEUE_MDM_DATA = "mdm-data";
+    public static final String QUEUE_DEVICE_NOTIFICATION = "notification-processor";
+    public static final String QUEUE_ME_SERVER_MIGRATION = "me-server-migration-processor";
+    public static final String QUEUE_DEVICE_APP_NOTIFICATION = "app-notification-processor";
+    public static final String QUEUE_EAS_SESSION = "eas-session";
+    public static final String QUEUE_EAS_TASK = "eas-task";
+    public static final String QUEUE_MDM_SDP_TASK = "mdm-sdp-data";
+    public static final String QUEUE_CHROME_WAKEUP = "chrome-inserver-wakeup";
+    public static final String QUEUE_BULK_ACTIONS = "bulk-actions-processor";
+    public static final String MODERN_MGMT = "modernmgmt-task";
+    public static final String IOS_VPP_LICENSE_HANDLING_TASK = "vpp-license-handling";
+    public static final String QUEUE_MDM_PROFILE_ASSOCIATION = "mdm-profile-collection";
+    public static final String QUEUE_COMPLIANCE_DISTRIBUTION = "mdm-device-compliance";
+    public static final String ENROLLMENT_DATA = "enrollment-data";
+    public static final String SECURITY_DATA = "security-data";
+    public static final String PASSIVE_EVENTS = "passive-events";
+    public static final String ACTIVE_EVENTS = "active-events";
+    public static final String ASSET_DATA = "asset-data";
+    public static final String PROFILE_COLLECTION_STATUS = "profile-collection-command";
+    public static final String APP_COLLECTION_STATUS = "app-collection-command";
+    public static final String BLACKLIST_COLLECTION_STATUS = "blacklist-collection-command";
+    public static final String OSUPDATE_COLLECTION_STATUS = "osupdate-collection-command";
+    public static final String SEQUENTIAL_COMMAND = "sequential-command";
+    public static final String AGENT_UPGRADE = "agent-upgrade-queue";
+    public static final String OTHERS = "other-data";
+    public static final String ASSIGN_USER = "assign-user";
+    public static final String MDM_COMMON_QUEUE = "mdm-common";
+    public static final String MDM_AUDIT_LOG_QUEUE = "mdm-audit-log";
+    public static final String SYNC_CONFIGURATIONS_PROCESSOR = "sync-configurations-processor";
+    public static final String APP_ASSIGNMENT_QUEUE = "app-assignment-queue";
+    public static final int IOS_COMMAND_QUEUE_TYPE = 100;
+    public static final int ANDROID_COMMAND_QUEUE_TYPE = 101;
+    public static final int SAFE_COMMAND_QUEUE_TYPE = 102;
+    public static final int WINDOWS_PHONE_COMMAND_QUEUE_TYPE = 103;
+    public static final int NATIVE_COMMAND_QUEUE_TYPE = 104;
+    public static final int ADMIN_COMMAND_QUEUE_TYPE = 105;
+    public static final int CHROME_INSERVER_CLIENT_COMMAND_QUEUE_TYPE = 106;
+    public static final int MAC_ONLY_COMMAND_QUEUE_TYPE = 107;
+    public static final int APPLE_MESSAGE_QUEUE_TYPE = 108;
+    public static final int IOS_APP_CLIENT_MSG_QUEUE_TYPE = 120;
+    public static final int ANDROID_MSG_QUEUE_TYPE = 121;
+    public static final int SAFE_MSG_QUEUE_TYPE = 122;
+    public static final int WINDOWS_APP_CLIENT_MSG_QUEUE_TYPE = 123;
+    public static final int NATIVE_MSG_QUEUE_TYPE = 124;
+    public static final int ADMIN_MSG_QUEUE_TYPE = 125;
+    public static final int CHROME_INSERVER_CLIENT_MSG_QUEUE_TYPE = 126;
+    public static final int IOS_APP_CLIENT_COMMAND_QUEUE_TYPE = 140;
+    public static final int WINDOWS_APP_CLIENT_COMMAND_QUEUE_TYPE = 143;
+    public static final Integer ENROLLMENT_DATA_ID;
+    public static final Integer SECURITY_DATA_ID;
+    public static final Integer PASSIVE_EVENTS_ID;
+    public static final Integer ACTIVE_EVENTS_ID;
+    public static final Integer ASSET_DATA_ID;
+    public static final Integer PROFILE_COLLECTION_STATUS_ID;
+    public static final Integer APP_COLLECTION_STATUS_ID;
+    public static final Integer BLACKLIST_COLLECTION_STATUS_ID;
+    public static final Integer OSUPDATE_COLLECTION_STATUS_ID;
+    public static final Integer SEQUENTIAL_COMMAND_ID;
+    public static final Integer AGENT_UPGRADE_ID;
+    public static final int DISCOVERED_APP_DATA = 48;
+    public static final Integer OTHERS_ID;
+    public static final int DEVICE_ASSOCIATION_QUEUE_TYPE = 160;
+    public static final int DEVICE_DISASSOCIATION_QUEUE_TYPE = 161;
+    public static final int USER_ASSOCIATION_QUEUE_TYPE = 162;
+    public static final int USER_DISASSOCIATION_QUEUE_TYPE = 163;
+    public static final int GROUP_ASSOCIATION_QUEUE_TYPE = 164;
+    public static final int GROUP_DISASSOCIATION_QUEUE_TYPE = 165;
+    public static final int PROFILE_DISTRIBUTION_AUDIT_QUEUE_TYPE = 200;
+    public static final int APP_DISTRIBUTION_AUDIT_QUEUE_TYPE = 201;
+    public static final int ANNOUNCEMENT_AUDIT_QUEUE_TYPE = 202;
+    public static final int DEVICE_RENAME_COMMAND_QUEUE_TYPE = 166;
+    public static final int AUTH_TOKEN_CHECK_IN_QUEUE_TYPE = 900;
+    
+    static {
+        ENROLLMENT_DATA_ID = 1;
+        SECURITY_DATA_ID = 2;
+        PASSIVE_EVENTS_ID = 3;
+        ACTIVE_EVENTS_ID = 4;
+        ASSET_DATA_ID = 5;
+        PROFILE_COLLECTION_STATUS_ID = 6;
+        APP_COLLECTION_STATUS_ID = 7;
+        BLACKLIST_COLLECTION_STATUS_ID = 8;
+        OSUPDATE_COLLECTION_STATUS_ID = 9;
+        SEQUENTIAL_COMMAND_ID = 10;
+        AGENT_UPGRADE_ID = 11;
+        OTHERS_ID = 12;
+    }
+}

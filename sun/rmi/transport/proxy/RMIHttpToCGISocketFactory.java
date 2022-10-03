@@ -1,0 +1,20 @@
+package sun.rmi.transport.proxy;
+
+import java.net.ServerSocket;
+import java.io.IOException;
+import java.net.URL;
+import java.net.Socket;
+import java.rmi.server.RMISocketFactory;
+
+public class RMIHttpToCGISocketFactory extends RMISocketFactory
+{
+    @Override
+    public Socket createSocket(final String s, final int n) throws IOException {
+        return new HttpSendSocket(s, n, new URL("http", s, "/cgi-bin/java-rmi.cgi?forward=" + n));
+    }
+    
+    @Override
+    public ServerSocket createServerSocket(final int n) throws IOException {
+        return new HttpAwareServerSocket(n);
+    }
+}

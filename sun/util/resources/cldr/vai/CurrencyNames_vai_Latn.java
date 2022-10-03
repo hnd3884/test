@@ -1,0 +1,11 @@
+package sun.util.resources.cldr.vai;
+
+import sun.util.resources.OpenListResourceBundle;
+
+public class CurrencyNames_vai_Latn extends OpenListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "LRD", "$" }, { "aed", "Yunait\u025b Arabhi \u0190mire Dihami" }, { "aoa", "Angola Kuwa\u014bza" }, { "aud", "\u0186\u0301situwa Dala" }, { "bhd", "Bhar\u025b\u014b Dina" }, { "bif", "Bhurundi Fura\u014bki" }, { "bwp", "Bhosuwana Pula" }, { "cad", "Kanada Dala" }, { "cdf", "K\u00f3ngo Fura\u014bki" }, { "chf", "Suwesi Fura\u014bki" }, { "cny", "Chan\u00ed\u0129 Yuwa\u014b R\u025b\u014bmimbi" }, { "cve", "\u0190sikudo Cabov\u025bdiyano" }, { "djf", "Jibhuti Fura\u014bki" }, { "dzd", "Agiriya Dina" }, { "egp", "M\u00eds\u00e9la P\u0254\u0254\u0303" }, { "ern", "\u0190ritera Nakifa" }, { "etb", "\u00cdtiyopiya Bhii" }, { "eur", "Yuro" }, { "gbp", "Jeng\u00e9si P\u0254\u0254\u0303 Sit\u025b\u0301li\u014b" }, { "ghc", "Gana Sidi" }, { "gmd", "Gambiya Dalasi" }, { "gns", "Gini Fura\u014bki" }, { "inr", "\u00cdndiya Rupi" }, { "jpy", "Japani\u0129 Y\u025b\u014b" }, { "kes", "K\u00e9nya Siye\u014b" }, { "kmf", "Komoro Fura\u014bki" }, { "lrd", "Laibhiya Dala" }, { "lsl", "Lis\u00f3to Loti" }, { "lyd", "Libhiya Dina" }, { "mad", "M\u0254roko Dihami" }, { "mga", "Malagasi Ariyari" }, { "mro", "M\u0254retani Yugiya" }, { "mur", "M\u0254resh\u0254 Rupi" }, { "mwk", "Malawi Kuwacha" }, { "mzm", "Mozambiki M\u025btikali" }, { "nad", "Namibiya Dala" }, { "ngn", "Na\u0129jiriya Na\u0129ra" }, { "rwf", "Rawunda Fura\u014bki" }, { "sar", "Lahabu Sawodi Riya" }, { "sdg", "Sudani\u0129 P\u0254\u0254\u0303" }, { "shp", "Si\u014b H\u025blina P\u0254\u0254\u0303" }, { "sll", "Liy\u0254\u0254\u0300" }, { "sos", "Somaliya Siye\u014b" }, { "std", "Sawo Tombe \u0253\u025b a Gbawo Dobura" }, { "szl", "Lilangeni" }, { "tnd", "Tunisiya Dina" }, { "tzs", "Ta\u014bzaniya Siye\u014b" }, { "ugx", "Yuganda Siye\u014b" }, { "usd", "Poo Dala" }, { "xaf", "\u00c1f\u00edr\u00edka T\u025b Sifa" }, { "xof", "\u00c1f\u00edr\u00edka Tele J\u00ed\u00ed Sifa" }, { "zar", "Afirika K\u0254i Le\u014b\u014b\u025b l\u0254 Randi" }, { "zmk", "Zambiya Kuwacha" }, { "zwd", "Zimbhabhuwe Dala" } };
+    }
+}

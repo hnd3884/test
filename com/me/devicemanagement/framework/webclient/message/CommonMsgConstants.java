@@ -1,0 +1,41 @@
+package com.me.devicemanagement.framework.webclient.message;
+
+public class CommonMsgConstants
+{
+    public static final String PROXY_NOT_CONFIGURED = "PROXY_NOT_CONFIGURED";
+    public static final String PROXY_CONFIGURED_INCORRECTLY = "PROXY_CONFIGURED_INCORRECTLY";
+    public static final String CLOSED_NETWORK_MDM = "CLOSED_NETWORK_MDM";
+    public static final String PORT_BLOCKED_WRITE = "PORT_BLOCKED_WRITE";
+    public static final String PORT_BLOCKED_READ = "PORT_BLOCKED_READ";
+    public static final String NAT_NOT_CONFIGURED = "NAT_NOT_CONFIGURED";
+    public static final String NAT_RECOMMENDATION = "NAT_RECOMMENDATION";
+    public static final String CUSTOMER_NOT_ADDED = "CUSTOMER_NOT_ADDED";
+    public static final String CUSTOMER_NOT_ADDED_WRITE = "CUSTOMER_NOT_ADDED_WRITE";
+    public static final String SSL_HOST_NAME_MISMATCH = "SSL_HOST_NAME_MISMATCH";
+    public static final String MAIL_SERVER_NOT_CONFIGURED = "MAIL_SERVER_NOT_CONFIGURED";
+    public static final String CR_NOT_CREATED = "CR_NOT_CREATED";
+    public static final String QUERY_REPORT_NOT_CREATED = "QUERY_REPORT_NOT_CREATED";
+    public static final String REQUIRED_SERVICE_RESTART = "REQUIRED_SERVICE_RESTART";
+    public static final String REQUIRED_SERVICE_RESTART_POSTGRES = "REQUIRED_SERVICE_RESTART_POSTGRES";
+    public static final String MAIL_SERVER_CONFIGURED_INCORRECTLY = "MAIL_SERVER_CONFIGURED_INCORRECTLY";
+    public static final String MAIL_SERVER_CONFIGURED_INCORRECTLY_READ = "MAIL_SERVER_CONFIGURED_INCORRECTLY_READ";
+    public static final String MAIL_SERVER_CONFIGURED_INCORRECTLY_WRITE = "MAIL_SERVER_CONFIGURED_INCORRECTLY_WRITE";
+    public static final String CERT_CHAIN_NOT_VERIFIED = "CERT_CHAIN_NOT_VERIFIED";
+    public static final String SSL_CERTIFICATE_EXPIRED = "SSL_CERTIFICATE_EXPIRED";
+    public static final String SSL_CERTIFICATE_EXPIRY_MSG = "SSL_CERTIFICATE_EXPIRY_MSG";
+    public static final String SSL_CERTIFICATE_EXPIRY_READ_MSG = "SSL_CERTIFICATE_EXPIRY_READ_MSG";
+    public static final String SSL_CERTIFICATE_EXPIRY_WRITE_MSG = "SSL_CERTIFICATE_EXPIRY_WRITE_MSG";
+    public static final String SERVICE_RESTARTED = "SERVICE_RESTARTED";
+    public static final String NAT_FIREWALL_INFO_MSG = "NAT_FIREWALL_INFO_MSG";
+    public static final String USER_ADMIN_CONFIGURE_SCOPE = "SCOPE_NOT_CONFIGURED";
+    public static final String USER_ADMIN_PAGE_MAIL_SERVER_NOT_CONFIGURED = "USER_ADMIN_PAGE_MAIL_SERVER_NOT_CONFIGURED";
+    public static final String DOMAIN_PASSWORD_CHANGED = "DOMAIN_PASSWORD_CHANGED";
+    public static final String NO_CREDENTIAL_SPECIFIED = "NO_CREDENTIAL_SPECIFIED";
+    public static final String DOMAIN_PASSWORD_CHANGED_WRITE = "DOMAIN_PASSWORD_CHANGED_WRITE";
+    public static final String DOMAIN_PASSWORD_CHANGED_READ = "DOMAIN_PASSWORD_CHANGED_READ";
+    public static final String AD_CREDENTIAL_NOT_SPECIFIED = "AD_CREDENTIAL_NOT_SPECIFIED";
+    public static final String PORT_BLOCKED = "PORT_BLOCKED";
+    public static final String QPM_INSTALL_FAILED = "QPM_INSTALL_FAILED";
+    public static final String QUICKFIXER_INCOMPATIBLE_FILE = "QUICKFIXER_INCOMPATIBLE_FILE";
+    public static final String CLIENT_ROOT_CERT_REGEN_RESTART = "CLIENT_ROOT_CERT_REGEN_RESTART";
+}

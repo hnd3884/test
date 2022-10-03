@@ -1,0 +1,11 @@
+package sun.util.resources.cldr.kea;
+
+import sun.util.resources.OpenListResourceBundle;
+
+public class CurrencyNames_kea extends OpenListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "aed", "Diren di Emiradus Arabi Unidu" }, { "aoa", "Kuanza" }, { "aud", "Dola australianu" }, { "bhd", "Dinar di Barain" }, { "bif", "Franku borundes" }, { "brl", "Rial brazileru" }, { "bwp", "Pula di Botsuana" }, { "cad", "Dola kanadianu" }, { "cdf", "Franku kongoles" }, { "chf", "Franku suisu" }, { "cny", "Iuan xines" }, { "cve", "Skudu Kabuverdianu" }, { "djf", "Franku di Djibuti" }, { "dkk", "Kuroa dinamarkeza" }, { "dzd", "Dinar arjelinu" }, { "egp", "Libra ejipsiu" }, { "ern", "Nafka di Eritreia" }, { "etb", "Bir etiopi" }, { "eur", "Euro" }, { "gbp", "Libra sterlina britaniku" }, { "ghc", "Sedi di Gana" }, { "gmd", "Dalasi" }, { "gns", "Sili" }, { "hkd", "Dola di Ong Kong" }, { "idr", "Rupia indoneziu" }, { "inr", "Rupia indianu" }, { "jpy", "Ieni japones" }, { "kes", "Xelin kenianu" }, { "kmf", "Franku di Komoris" }, { "krw", "Won sul-koreanu" }, { "lrd", "Dola liberianu" }, { "lsl", "Loti di Lezotu" }, { "lyd", "Dinar libiu" }, { "mad", "Diren marokinu" }, { "mga", "Ariari di Madagaskar" }, { "mro", "Ougia" }, { "mur", "Rupia di Maurisias" }, { "mwk", "Kuaxa di Malaui" }, { "mxn", "Pezu mexikanu" }, { "mzm", "Metikal" }, { "nad", "Dola namibianu" }, { "ngn", "Naira" }, { "nok", "Kuroa norueges" }, { "pln", "Zloty polaku" }, { "rub", "Rublu rusu" }, { "rwf", "Franku ruandes" }, { "sar", "Rial saudita" }, { "scr", "Rupia di Seixelis" }, { "sdg", "Libra sudanes" }, { "sdp", "Libra sudanes antigu" }, { "sek", "Kuroa sueku" }, { "shp", "Libra di Santa Ilena" }, { "sll", "Leone di Sera Leoa" }, { "sos", "Xelin somalianu" }, { "std", "Dobra di S\u00e3u Tume i Prinsipi" }, { "szl", "Lilanjeni" }, { "thb", "Baht tailandes" }, { "tnd", "Dinar tunizianu" }, { "try", "Lira turku" }, { "twd", "Dola Novu di Taiwan" }, { "tzs", "Xelin di Tanzania" }, { "ugx", "Xelin ugandensi" }, { "usd", "Dola merkanu" }, { "xaf", "Franku CFA BEAC" }, { "xof", "Franku CFA BCEAO" }, { "xxx", "mueda diskonxedu" }, { "zar", "Rand sulafrikanu" }, { "zmk", "Kuaxa zambianu" }, { "zwd", "Dola di Zimbabue" } };
+    }
+}

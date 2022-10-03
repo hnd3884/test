@@ -1,0 +1,11 @@
+package sun.text.resources.cldr.to;
+
+import java.util.ListResourceBundle;
+
+public class FormatData_to extends ListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "MonthNames", { "S\u0101nuali", "F\u0113pueli", "Ma\u02bbasi", "\u02bbEpeleli", "M\u0113", "Sune", "Siulai", "\u02bbAokosi", "Sepitema", "\u02bbOkatopa", "N\u014dvema", "T\u012bsema", "" } }, { "MonthAbbreviations", { "S\u0101n", "F\u0113p", "Ma\u02bba", "\u02bbEpe", "M\u0113", "Sun", "Siu", "\u02bbAok", "Sep", "\u02bbOka", "N\u014dv", "T\u012bs", "" } }, { "MonthNarrows", { "S", "F", "M", "E", "M", "S", "S", "A", "S", "O", "N", "T", "" } }, { "DayNames", { "S\u0101pate", "M\u014dnite", "T\u016bsite", "Pulelulu", "Tu\u02bbapulelulu", "Falaite", "Tokonaki" } }, { "DayAbbreviations", { "S\u0101p", "M\u014dn", "T\u016bs", "Pul", "Tu\u02bba", "Fal", "Tok" } }, { "DayNarrows", { "S", "M", "T", "P", "T", "F", "T" } }, { "QuarterNames", { "kuata \u02bbuluaki", "kuata ua", "kuata tolu", "kuata f\u0101" } }, { "standalone.QuarterNames", { "kuata 1", "kuata 2", "kuata 3", "kuata 4" } }, { "QuarterAbbreviations", { "K1", "K2", "K3", "K4" } }, { "long.Eras", { "ki mu\u02bba", "ta\u02bbu \u02bbo S\u012bs\u016b" } }, { "Eras", { "KM", "TS" } }, { "narrow.Eras", { "K\u0101M\u0101", "T\u0101S\u0101" } }, { "field.era", "kuonga" }, { "field.year", "ta\u02bbu" }, { "field.month", "m\u0101hina" }, { "field.week", "uike" }, { "field.weekday", "\u02bbaho \u02bbo e uike" }, { "field.dayperiod", "AM/PM" }, { "field.hour", "houa" }, { "field.minute", "miniti" }, { "field.second", "sekoni" }, { "field.zone", "taimi fakavahe" }, { "TimePatterns", { "HH:mm:ss zzzz", "HH:mm:ss z", "HH:mm:ss", "HH:mm" } }, { "DatePatterns", { "EEEE d MMMM y", "d MMMM y", "d MMM y", "d/M/yy" } }, { "calendarname.islamic-civil", "fakamohameti-sivile" }, { "calendarname.islamicc", "fakamohameti-sivile" }, { "calendarname.gregorian", "fakakelekolia" }, { "calendarname.gregory", "fakakelekolia" }, { "calendarname.japanese", "fakasiapani" }, { "calendarname.buddhist", "fakaputa" }, { "calendarname.islamic", "fakamohameti" }, { "DefaultNumberingSystem", "latn" }, { "latn.NumberElements", { ".", ",", ";", "%", "0", "#", "-", "E", "\u2030", "\u221e", "NaN" } } };
+    }
+}

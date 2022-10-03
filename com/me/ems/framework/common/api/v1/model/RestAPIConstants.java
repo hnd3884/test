@@ -1,0 +1,57 @@
+package com.me.ems.framework.common.api.v1.model;
+
+public class RestAPIConstants
+{
+    public static final String CUSTOMER_HEADER = "X-Customer";
+    public static final String ACCEPT_HEADER = "Accept";
+    public static final String GET_METHOD_TYPE = "GET";
+    public static final String LINK_SELF_REL_TYPE = "_self";
+    public static final String TOTAL_COUNT_HEADER = "X-Total-Count";
+    public static final String CONTENT_TYPE_HEADER = "content-type";
+    public static final String CONTENT_DISPOSITION = "Content-Disposition";
+    public static final String FILENAME_HEADER = "X-FileName";
+    public static final String ADMIN_HOME_PAGE = "admin-homepage";
+    public static final String ADMIN_HOME_PAGE_FILES = "adminHomePageFiles";
+    public static final String FILE_NAME_STARTING = "adminhome-";
+    public static final String SECTION_DETAILS = "sectionDetails";
+    public static final String SECTION_PAGES = "sectionPages";
+    public static final String NAME = "name";
+    public static final String DISPLAY_NAME = "displayName";
+    public static final String PAGE_ICON = "pageIcon";
+    public static final String PAGE_URL = "pageURL";
+    public static final String SECTION_ICON = "sectionIcon";
+    public static final String ROLES = "roles";
+    public static final String MULTI_ROLE_CHECK = "multiRoleCheck";
+    public static final String ROLES_NEGATION = "rolesNegation";
+    public static final String FOR_SAS = "forSAS";
+    public static final String FOR_MSP = "forMSP";
+    public static final String PRODUCT_TYPE = "productType";
+    public static final String IS_PRODUCT_TYPE_NEGATION = "isProductTypeNegation";
+    public static final String PRODUCT_CODE = "productCode";
+    public static final String IS_PRODUCT_CODE_NEGATION = "isProductCodeNegation";
+    public static final String LICENSE_TYPE = "licenseType";
+    public static final String IS_LICENSE_TYPE_NEGATION = "isLicenseTypeNegation";
+    public static final String LICENSE_VERSION = "licenseVersion";
+    public static final String IS_LICENSE_VERSION_NEGATION = "isLicenseVersionNegation";
+    public static final String CUSTOM_CHECK_CLASS = "customCheckClass";
+    public static final String CUSTOM_CHECK_METHOD = "customCheckMethod";
+    public static final String IS_SPICEWORK_ENABLED = "isSpiceworksEnabled";
+    public static final String PAGE_NAME = "pageName";
+    public static final String ICON = "icon";
+    public static final String PAGES = "pages";
+    public static final String URL = "url";
+    public static final String ROUTE = "route";
+    public static final String ENABLED = "enabled";
+    public static final String IS_NEW = "isNew";
+    public static final String REPORTS = "reports";
+    public static final String ID = "id";
+    public static final String PROPERTIES = "properties";
+    public static final String CHILDREN = "children";
+    public static final String REPORT_FILES_STARTING_TEXT = "schedulereports";
+    public static final String SCHEDULE_REPORT_FILES = "scheduleReportsFiles";
+    public static final String SUB_FILE_NAMES = "subFileNames";
+    public static final String FILE_PATH = "filePath";
+    public static final String EMS_SERVER_TYPE = "emsServerType";
+    public static final String USER_MGMT = "User_Mgmt";
+    public static final String SECURITY_MGMT = "Security_Mgmt";
+}

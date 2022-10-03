@@ -1,0 +1,15 @@
+package io.netty.channel;
+
+import io.netty.util.concurrent.EventExecutorGroup;
+
+public interface EventLoopGroup extends EventExecutorGroup
+{
+    EventLoop next();
+    
+    ChannelFuture register(final Channel p0);
+    
+    ChannelFuture register(final ChannelPromise p0);
+    
+    @Deprecated
+    ChannelFuture register(final Channel p0, final ChannelPromise p1);
+}

@@ -1,0 +1,81 @@
+package com.adventnet.mdmconfiguration;
+
+public final class ANDROIDACTIVESYNCPOLICY
+{
+    public static final String TABLE = "AndroidActiveSyncPolicy";
+    public static final String CONFIG_DATA_ITEM_ID = "CONFIG_DATA_ITEM_ID";
+    public static final int CONFIG_DATA_ITEM_ID_IDX = 1;
+    public static final String ACCOUNT_TYPE = "ACCOUNT_TYPE";
+    public static final int ACCOUNT_TYPE_IDX = 2;
+    public static final String ACCOUNT_NAME = "ACCOUNT_NAME";
+    public static final int ACCOUNT_NAME_IDX = 3;
+    public static final String USER_NAME = "USER_NAME";
+    public static final int USER_NAME_IDX = 4;
+    public static final String DOMAIN = "DOMAIN";
+    public static final int DOMAIN_IDX = 5;
+    public static final String ACTIVE_SYNC_HOST = "ACTIVE_SYNC_HOST";
+    public static final int ACTIVE_SYNC_HOST_IDX = 6;
+    public static final String EMAIL_ADDRESS = "EMAIL_ADDRESS";
+    public static final int EMAIL_ADDRESS_IDX = 7;
+    public static final String PASSWORD = "PASSWORD";
+    public static final int PASSWORD_IDX = 8;
+    public static final String ACCEPT_ALL_CERTIFICATES = "ACCEPT_ALL_CERTIFICATES";
+    public static final int ACCEPT_ALL_CERTIFICATES_IDX = 9;
+    public static final String USE_SSL = "USE_SSL";
+    public static final int USE_SSL_IDX = 10;
+    public static final String DEFAULT_ACCOUNT = "DEFAULT_ACCOUNT";
+    public static final int DEFAULT_ACCOUNT_IDX = 11;
+    public static final String ALLOW_ALWAYS_VIBRATE = "ALLOW_ALWAYS_VIBRATE";
+    public static final int ALLOW_ALWAYS_VIBRATE_IDX = 12;
+    public static final String ALLOW_SILENT_VIBRATE = "ALLOW_SILENT_VIBRATE";
+    public static final int ALLOW_SILENT_VIBRATE_IDX = 13;
+    public static final String SYNC_CALANDAR = "SYNC_CALANDAR";
+    public static final int SYNC_CALANDAR_IDX = 14;
+    public static final String SYNC_CONTACTS = "SYNC_CONTACTS";
+    public static final int SYNC_CONTACTS_IDX = 15;
+    public static final String SYNC_NOTES = "SYNC_NOTES";
+    public static final int SYNC_NOTES_IDX = 16;
+    public static final String SYNC_TASKS = "SYNC_TASKS";
+    public static final int SYNC_TASKS_IDX = 17;
+    public static final String PAST_DAYS_MAIL_TO_SYNC = "PAST_DAYS_MAIL_TO_SYNC";
+    public static final int PAST_DAYS_MAIL_TO_SYNC_IDX = 18;
+    public static final String PAST_DAYS_TO_CALANDER_SYNC = "PAST_DAYS_TO_CALANDER_SYNC";
+    public static final int PAST_DAYS_TO_CALANDER_SYNC_IDX = 19;
+    public static final String IDENTITY_CERT_ID = "IDENTITY_CERT_ID";
+    public static final int IDENTITY_CERT_ID_IDX = 20;
+    public static final String PEAK_DAYS = "PEAK_DAYS";
+    public static final int PEAK_DAYS_IDX = 21;
+    public static final String PEAK_START_MINS = "PEAK_START_MINS";
+    public static final int PEAK_START_MINS_IDX = 22;
+    public static final String PEAK_END_MINS = "PEAK_END_MINS";
+    public static final int PEAK_END_MINS_IDX = 23;
+    public static final String PEAK_DAYS_SYCN_FREQUENCY = "PEAK_DAYS_SYCN_FREQUENCY";
+    public static final int PEAK_DAYS_SYCN_FREQUENCY_IDX = 24;
+    public static final String OFF_PEAK_DAYS_SYCN_FREQUENCY = "OFF_PEAK_DAYS_SYCN_FREQUENCY";
+    public static final int OFF_PEAK_DAYS_SYCN_FREQUENCY_IDX = 25;
+    public static final String INCOMING_ATTACHMENT_MAX_SIZE = "INCOMING_ATTACHMENT_MAX_SIZE";
+    public static final int INCOMING_ATTACHMENT_MAX_SIZE_IDX = 26;
+    public static final String ALLOW_NOTIFY = "ALLOW_NOTIFY";
+    public static final int ALLOW_NOTIFY_IDX = 27;
+    public static final String SIGNATURE = "SIGNATURE";
+    public static final int SIGNATURE_IDX = 28;
+    public static final String ALLOW_CHANGE_MAIL_SETTINGS = "ALLOW_CHANGE_MAIL_SETTINGS";
+    public static final int ALLOW_CHANGE_MAIL_SETTINGS_IDX = 29;
+    public static final String ALLOW_FORWARD_EMAIL = "ALLOW_FORWARD_EMAIL";
+    public static final int ALLOW_FORWARD_EMAIL_IDX = 30;
+    public static final String ALLOW_HTML_CONTENT = "ALLOW_HTML_CONTENT";
+    public static final int ALLOW_HTML_CONTENT_IDX = 31;
+    public static final String RETRIVAL_SIZE = "RETRIVAL_SIZE";
+    public static final int RETRIVAL_SIZE_IDX = 32;
+    public static final String ROAMING_SETTINGS = "ROAMING_SETTINGS";
+    public static final int ROAMING_SETTINGS_IDX = 33;
+    public static final String PRIMARY_CLIENT_PREF = "PRIMARY_CLIENT_PREF";
+    public static final int PRIMARY_CLIENT_PREF_IDX = 34;
+    public static final String SECONDARY_CLIENT_PREF = "SECONDARY_CLIENT_PREF";
+    public static final int SECONDARY_CLIENT_PREF_IDX = 35;
+    public static final String PASSWORD_ID = "PASSWORD_ID";
+    public static final int PASSWORD_ID_IDX = 36;
+    
+    private ANDROIDACTIVESYNCPOLICY() {
+    }
+}

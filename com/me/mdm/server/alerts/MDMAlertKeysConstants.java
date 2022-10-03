@@ -1,0 +1,57 @@
+package com.me.mdm.server.alerts;
+
+public class MDMAlertKeysConstants
+{
+    public static final String APP_NAME = "$app_name$";
+    public static final String APP_VERSION = "$app_version$";
+    public static final String DEVICE_NAME = "$device_name$";
+    public static final String APP_BUNDLE_IDENTIFIER = "$bundle_identifier$";
+    public static final String APP_LIST = "$app_list$";
+    public static final String APPLN_NAME_LIST = "$app_name_list$";
+    public static final String PLATFORM_TYPE = "$platform_type$";
+    public static final String USER_NAME = "$user_name$";
+    public static final String ENROLLMENT_LINK = "$link_to_enroll$";
+    public static final String USER_EMAIL_ID = "$user_emailid$";
+    public static final String OTP_PASSWORD = "$passcode$";
+    public static final String SERVER_NAME = "$server_name$";
+    public static final String SERVER_PORT = "$server_port$";
+    public static final String APP_NAME_LIST = "$app_list$";
+    public static final String HELP_LINK = "$help_link$";
+    public static final String EXPIRED_BLACKLIST_APP_SUMMARY = "$Expired_blacklist_app_summary$";
+    public static final String FIRST_NAME = "$first_name$";
+    public static final String MIDDLE_NAME = "$middle_name$";
+    public static final String LAST_NAME = "$last_name$";
+    public static final String DISPLAY_NAME = "$display_name$";
+    public static final String QR_IMAGE = "$qrimage$";
+    public static final String PLAYSTORE_URL = "$playStore_url$";
+    public static final String ENROLLMENT_ID = "$enrollment_id$";
+    public static final String INVITATION_URL = "$invitation_url$";
+    public static final String APP_DONLOAD_URL = "$app_download_url$";
+    public static final String DISCOVER_URL = "$discover_url$";
+    public static final String MDM_AGENT_NAME = "$mdm_agent_name$";
+    public static final String DAYS_TO_EXPIRE = "$days_to_expire$";
+    public static final String EXCHANGE_BLOCKED_DEVICES = "$exchange_blocked_devices$";
+    public static final String SELF_ENROLL_URL = "$self_enroll_url$";
+    public static final String EAS_USER_NAME = "$eas_user_name$";
+    public static final String DEVICE_MODEL = "$model$";
+    public static final String DEVICE_IMEI = "$imei$";
+    public static final String DEVICE_OS = "$os$";
+    public static final String CURRENT_LOCATION = "$current_location$";
+    public static final String DOMAIN_NAME = "$domain_name$";
+    public static final String STORE_APP_URL = "$store_app_url$";
+    public static final String HTTPS_SERVER_URL = "$complete_server_url$";
+    public static final String ORGANISATION_NAME = "$organisation_name$";
+    public static final String ORGANISATION_LOGO_URL = "$organisation_logo_src$";
+    public static final String SERIAL_NUMBER = "$device_serial_number$";
+    public static final String DEVICE_GROUPS = "$device_groups$";
+    public static final String MAIL_ADDRESS = "$mail_address$";
+    public static final String DEVICE_MODEL_NAME = "$device_model$";
+    public static final String CERTIFICATE_NAME = "$certificate_name$";
+    public static final String CERTIFICATE_ISSUER_NAME = "$certificate_issuer_name$";
+    public static final String CERTIFICATE_SUBJECT_NAME = "$certificate_subject_name$";
+    public static final String CERTIFICATE_SERIAL_NUMBER = "$serial_number$";
+    public static final String CERTIFICATE_SIGNATURE_ALGORITHM = "$signature_algorithm$";
+    public static final String IOS_LOGO_URL = "$ios_logo$";
+    public static final String ANDROID_LOGO_URL = "$android_logo$";
+    public static final String WINDOWS_LOGO_URL = "$windows_logo$";
+}

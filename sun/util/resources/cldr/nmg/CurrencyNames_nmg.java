@@ -1,0 +1,11 @@
+package sun.util.resources.cldr.nmg;
+
+import sun.util.resources.OpenListResourceBundle;
+
+public class CurrencyNames_nmg extends OpenListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "aed", "M\u0254n B ´Arabe" }, { "aoa", "M\u0254n Angola" }, { "aud", "D\u0254\u0301ll\u0254 \u0186stralia" }, { "bhd", "M\u0254n Bahrein" }, { "bif", "Fra\u014b Burundi" }, { "bwp", "M\u0254n Botswana" }, { "cad", "D\u0254\u0301ll\u0254 Kanada" }, { "cdf", "Fra\u014b b\u00f3 Kongol\u025b\u030c" }, { "chf", "Fra\u014b Suisse" }, { "cny", "M\u0254n b\u00f3 Chinois" }, { "cve", "M\u0254n Kapv\u025brt" }, { "djf", "Fra\u014b Jibuti" }, { "dzd", "M\u0254n Algeria" }, { "egp", "M\u0254n \u00c4gypt\u025bn" }, { "ern", "M\u0254n Erytr\u00e9" }, { "etb", "M\u0254n Ethiopia" }, { "eur", "Euro" }, { "gbp", "M\u0254n Ng\u025b\u0304l\u025b\u0304n" }, { "ghc", "M\u0254n Gana" }, { "gmd", "M\u0254n Gambia" }, { "gns", "Fra\u014b Guin\u00e9" }, { "inr", "M\u0254n India" }, { "jpy", "M\u0254n Jap\u0254n" }, { "kes", "M\u0254n K\u025bnya" }, { "kmf", "Fra\u014b b\u00f3 K\u0254m\u0254r" }, { "lrd", "D\u0254\u0301ll\u0254 Liberia" }, { "lsl", "M\u0254n Lesoto" }, { "lyd", "M\u0254n Libya" }, { "mad", "M\u0254n Mar\u0254k" }, { "mga", "M\u0254n Madagaskar" }, { "mro", "M\u0254n Moritania" }, { "mur", "M\u0254n Moriss" }, { "mwk", "M\u0254n Malawi" }, { "mzm", "M\u0254n Mozambik" }, { "nad", "D\u0254\u0301ll\u0254 Namibia" }, { "ngn", "Na\u00efra Nigeria" }, { "rwf", "Fra\u014b Rwanda" }, { "sar", "M\u0254n Saudi Arabia" }, { "scr", "M\u0254n Seych\u025blle" }, { "sdg", "M\u0254n Sudan" }, { "sdp", "M\u0254n Sudan (1957-1998)" }, { "shp", "M\u0254n m\u00e1 Saint Lina" }, { "sll", "M\u0254n Le\u0254ne" }, { "sos", "M\u0254n Somal\u00eda" }, { "std", "M\u0254n Sao tom\u00e9 na prinship" }, { "szl", "M\u0254n Ligangeni" }, { "tnd", "M\u0254n Tunisia" }, { "tzs", "M\u0254n Tanzania" }, { "ugx", "M\u0254n Uganda" }, { "usd", "D\u0254\u0301ll\u0254 Am\u025b\u0155ka" }, { "xaf", "Fra\u014b CFA BEAC" }, { "xof", "Fra\u014b CFA BCEAO" }, { "zar", "M\u0254n Afrik y\u00ed s\u00ed" }, { "zmk", "M\u0254n Zambia" }, { "zwd", "D\u0254\u0301ll\u0254 Zimbabw\u01dd (1980-2008)" } };
+    }
+}

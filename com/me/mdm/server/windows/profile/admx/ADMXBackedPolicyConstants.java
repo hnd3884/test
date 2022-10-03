@@ -1,0 +1,50 @@
+package com.me.mdm.server.windows.profile.admx;
+
+public class ADMXBackedPolicyConstants
+{
+    public static final String ENABLED = "enabled";
+    public static final String DISABLED = "disabled";
+    public static final String DATA = "data";
+    public static final String ID = "id";
+    public static final String VALUE = "value";
+    public static final String ENCRYPTION_METHOD_WITHXTS_NAME = "EncryptionMethodWithXts_Name";
+    public static final String ENCRYPTION_METHOD_WITH_XTS_OS_DROPDOWN_NAME = "EncryptionMethodWithXtsOsDropDown_Name";
+    public static final String ENCRYPTION_METHOD_WITH_XTS_FDV_DROPDOWN_NAME = "EncryptionMethodWithXtsFdvDropDown_Name";
+    public static final String ENCRYPTION_METHOD_WITH_XTS_RDV_DROPDOWN_NAME = "EncryptionMethodWithXtsRdvDropDown_Name";
+    public static final String CONFIGURE_ADVANCED_STARTUP_NAME = "ConfigureAdvancedStartup_Name";
+    public static final String CONFIGURE_NON_TPM_STARTUPKEY_USAGE_NAME = "ConfigureNonTPMStartupKeyUsage_Name";
+    public static final String CONFIGURE_TPM_USAGE_DROPDOWN_NAME = "ConfigureTPMUsageDropDown_Name";
+    public static final String CONFIGURE_PIN_USAGE_DROPDOWN_NAME = "ConfigurePINUsageDropDown_Name";
+    public static final String CONFIGURE_TPM_STARTUP_KEY_USAGEDROPDOWN_NAME = "ConfigureTPMStartupKeyUsageDropDown_Name";
+    public static final String CONFIGURE_TPM_PIN_KEY_USAGE_DROPDOWN_NAME = "ConfigureTPMPINKeyUsageDropDown_Name";
+    public static final String MINIMUM_PIN_LENGTH_NAME = "MinimumPINLength_Name";
+    public static final String MIN_PIN_LENGTH = "MinPINLength";
+    public static final String PREBOOT_RECOVERY_INFO_NAME = "PrebootRecoveryInfo_Name";
+    public static final String PREBOOT_RECOVERY_INFO_DROPDOWN_NAME = "PrebootRecoveryInfoDropDown_Name";
+    public static final String RECOVERY_MESSAGE_INPUT = "RecoveryMessage_Input";
+    public static final String RECOVERY_URL_INPUT = "RecoveryUrl_Input";
+    public static final String OS_RECOVERY_USAGE_NAME = "OSRecoveryUsage_Name";
+    public static final String OS_ALLOW_DRA_NAME = "OSAllowDRA_Name";
+    public static final String OS_RECOVERY_PASSWORD_USAGE_DROPDOWN_NAME = "OSRecoveryPasswordUsageDropDown_Name";
+    public static final String OS_RECOVERY_KEY_USAGE_DROPDOWN_NAME = "OSRecoveryKeyUsageDropDown_Name";
+    public static final String OS_HIDE_RECOVERY_PAGE_NAME = "OSHideRecoveryPage_Name";
+    public static final String OS_ACTIVE_DIRECTORY_BACKUP_NAME = "OSActiveDirectoryBackup_Name";
+    public static final String OS_ACTIVE_DIRECTORY_BACKUP_DROPDOWN_NAME = "OSActiveDirectoryBackupDropDown_Name";
+    public static final String OS_REQUIRE_ACTIVE_DIRECTORY_BACKUP_NAME = "OSRequireActiveDirectoryBackup_Name";
+    public static final String FDV_RECOVERY_USAGE_NAME = "FDVRecoveryUsage_Name";
+    public static final String FDV_ALLOW_DRA_NAME = "FDVAllowDRA_Name";
+    public static final String FDV_RECOVERY_PASSWORD_USAGE_DROPDOWN_NAME = "FDVRecoveryPasswordUsageDropDown_Name";
+    public static final String FDV_RECOVERY_KEY_USAGE_DROPDOWN_NAME = "FDVRecoveryKeyUsageDropDown_Name";
+    public static final String FDV_HIDE_RECOVERY_PAGE_NAME = "FDVHideRecoveryPage_Name";
+    public static final String FDV_ACTIVE_DIRECTORY_BACKUP_NAME = "FDVActiveDirectoryBackup_Name";
+    public static final String FDV_ACTIVE_DIRECTORY_BACKUP_DROPDOWN_NAME = "FDVActiveDirectoryBackupDropDown_Name";
+    public static final String FDV_REQUIRE_ACTIVE_DIRECTORY_BACKUP_NAME = "FDVRequireActiveDirectoryBackup_Name";
+    public static final String FDV_DENY_WRITE_ACCESS_NAME = "FDVDenyWriteAccess_Name";
+    public static final String RDV_DENY_WRITE_ACCESS_NAME = "RDVDenyWriteAccess_Name";
+    public static final String RDV_CROSS_ORG = "RDVCrossOrg";
+    public static final String STORE_RECOVERY_PASS = "2";
+    public static final String STORE_RECOVERY_PASS_AND_KEY_PACKAGES = "1";
+    public static final int ADMX_STATUS_DISABLED = 0;
+    public static final int ADMX_STATUS_ENABLED = 1;
+    public static final int ADMX_STATUS_NOT_CONFIGURED = 2;
+}

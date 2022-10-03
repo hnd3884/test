@@ -1,0 +1,52 @@
+package com.me.mdm.server.apps.windows;
+
+public class WindowsBusinessStoreConstants
+{
+    public static final String PRODUCT_KEY = "productKey";
+    public static final String PRODUCT_ID = "productId";
+    public static final String SKU_ID = "skuId";
+    public static final String SEAT_CAPACITY = "seatCapacity";
+    public static final String AVAILABLE_SEATS = "availableSeats";
+    public static final String LICENSE_TYPE = "licenseType";
+    public static final String DISTRIBUTION_POLICY = "distributionPolicy";
+    public static final String CONTINUATION_TOKEN = "continuationToken";
+    public static final String PACKAGE_FAMILY_NAME = "packageFamilyName";
+    public static final String PRODUCT_PACKAGES = "productPackages";
+    public static final String PLATFORMS = "platforms";
+    public static final String PLATFORM_NAME = "platformName";
+    public static final String ARCHITECTURES = "architectures";
+    public static final String MAJOR = "major";
+    public static final String MINOR = "minor";
+    public static final String BUILD = "build";
+    public static final String REVISION = "revision";
+    public static final String UNIVERSAL = "Windows.Universal";
+    public static final String PHONE = "Windows.Mobile";
+    public static final String DESKTOP = "Windows.Desktop";
+    public static final String WINDOWS8X = "Windows.Windows8x";
+    public static final String WINDOWSPHONE8X = "Windows.WindowsPhone8x";
+    public static final String CATEGORY = "category";
+    public static final String PACKAGEID = "packageId";
+    public static final String PACKAGEFULLNAME = "packageFullName";
+    public static final String BUNDLESIZE = "fileSize";
+    public static final String FILEHASH = "fileHash";
+    public static final String FRAMEWORKDEPENDENCYPACKAGES = "frameworkDependencyPackages";
+    public static final String APPNAME = "displayName";
+    public static final String DESCRIPTION = "description";
+    public static final String IMAGES = "images";
+    public static final String LOCATION = "location";
+    public static final String BGCOLOR = "backgroundColor";
+    public static final String PURPOSE = "purpose";
+    public static final String VERSION = "version";
+    public static final String MIN_VERSION = "minVersion";
+    public static final String OFFLINE_LICENSE = "offline";
+    public static final String CONTENT_ID = "contentId";
+    public static final String LICENSE_BLOB = "licenseBlob";
+    public static final String PRODUCT_KIND = "productKind";
+    public static final String PRODUCT_KIND_PASS = "Pass";
+    public static final String PRODUCT_KIND_APPLICATION = "Application";
+    public static final String PRODUCT_KIND_GAME = "Game";
+    public static final String AUMIDS = "aumids";
+    public static final String PACKAGEIDENTITYNAME = "packageIdentityName";
+    public static final String URL = "url";
+    public static final String NEUTRAL_ARCH = "neutral";
+}

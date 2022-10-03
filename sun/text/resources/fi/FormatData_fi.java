@@ -1,0 +1,11 @@
+package sun.text.resources.fi;
+
+import sun.util.resources.ParallelListResourceBundle;
+
+public class FormatData_fi extends ParallelListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "MonthNames", { "tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kes\u00e4kuuta", "hein\u00e4kuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta", "" } }, { "standalone.MonthNames", { "tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kes\u00e4kuu", "hein\u00e4kuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu", "" } }, { "MonthAbbreviations", { "tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kes\u00e4kuuta", "hein\u00e4kuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta", "" } }, { "standalone.MonthAbbreviations", { "tammi", "helmi", "maalis", "huhti", "touko", "kes\u00e4", "hein\u00e4", "elo", "syys", "loka", "marras", "joulu", "" } }, { "MonthNarrows", { "T", "H", "M", "H", "T", "K", "H", "E", "S", "L", "M", "J", "" } }, { "standalone.MonthNarrows", { "T", "H", "M", "H", "T", "K", "H", "E", "S", "L", "M", "J", "" } }, { "long.Eras", { "ennen Kristuksen syntym\u00e4\u00e4", "j\u00e4lkeen Kristuksen syntym\u00e4n" } }, { "Eras", { "eKr.", "jKr." } }, { "narrow.Eras", { "eK", "jK" } }, { "DayNames", { "sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai" } }, { "standalone.DayNames", { "sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai" } }, { "DayAbbreviations", { "su", "ma", "ti", "ke", "to", "pe", "la" } }, { "standalone.DayAbbreviations", { "su", "ma", "ti", "ke", "to", "pe", "la" } }, { "DayNarrows", { "S", "M", "T", "K", "T", "P", "L" } }, { "standalone.DayNarrows", { "S", "M", "T", "K", "T", "P", "L" } }, { "NumberElements", { ",", " ", ";", "%", "0", "#", "-", "E", "\u2030", "\u221e", "\ufffd" } }, { "TimePatterns", { "H.mm.ss z", "'klo 'H.mm.ss", "H:mm:ss", "H:mm" } }, { "DatePatterns", { "d. MMMM yyyy", "d. MMMM yyyy", "d.M.yyyy", "d.M.yyyy" } }, { "DateTimePatterns", { "{1} {0}" } }, { "DateTimePatternChars", "GanjkHmsSEDFwWxhKzZ" }, { "AmPmMarkers", { "ap.", "ip." } }, { "narrow.AmPmMarkers", { "ap.", "ip." } } };
+    }
+}

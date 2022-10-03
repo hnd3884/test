@@ -1,0 +1,11 @@
+package org.apache.xmlbeans.impl.values;
+
+import org.apache.xmlbeans.SchemaType;
+import org.apache.xmlbeans.XmlDouble;
+
+public class XmlDoubleRestriction extends JavaDoubleHolderEx implements XmlDouble
+{
+    public XmlDoubleRestriction(final SchemaType type, final boolean complex) {
+        super(type, complex);
+    }
+}

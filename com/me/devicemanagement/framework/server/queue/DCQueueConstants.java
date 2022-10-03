@@ -1,0 +1,54 @@
+package com.me.devicemanagement.framework.server.queue;
+
+public interface DCQueueConstants
+{
+    public static final String QUEUE_SDP_INVENTORY_DATA = "sdp-inv-data";
+    public static final String QUEUE_ROOT_DIR_NAME = "dc-queue";
+    public static final String QUEUE_CONTAINS_PRIORITY_DATA = "QUEUE_CONTAINS_PRIORITY_DATA";
+    public static final String PROCESSED_PRIORITY_QUEUE = "PROCESSED_PRIORITY_QUEUE";
+    public static final String PROCESSED_PRIORITY_QUEUE_REDIS = "PROCESSED_PRIORITY_QUEUE_REDIS";
+    public static final String QUEUE_MAX_FILE_SIZE = "QUEUE_MAX_FILE_SIZE";
+    public static final int Q_DATA_IN_MEMORY = 1;
+    public static final int Q_DATA_IN_DB = 2;
+    public static final int Q_DATA_IN_ANY_STATE = 3;
+    public static final int QUEUE_ACTIVE = 100;
+    public static final int QUEUE_SUSPENDED = 101;
+    public static final int SDP_INV_MDM_IOS = 18;
+    public static final int SDP_INV_MDM_ANDROID = 19;
+    public static final int SDP_INV_MDM_WP = 20;
+    public static final int SDP_INV_MDM_CHROME = 21;
+    public static final String REDIS_EXECUTION = "EXECUTION";
+    public static final String REDIS_INPUT = "INPUT";
+    public static final String REDIS_INPUT_PRIORITY = "PRIORITY";
+    public static final String REDIS_PROCESS = "PROCESS";
+    public static final String REDIS_FILENAMEQ = "FILENAMEQ";
+    public static final String REDIS_FILENAME = "FILENAME";
+    public static final String REDIS_FILELOCATION = "AGENTFILELOCATION";
+    public static final String REDIS_REF_ID = "QREF_ID";
+    public static final String REDIS_KEY_NAME_SEPERATOR = "_";
+    public static final String QERROR_LOGGER_DELIMITER = "||";
+    public static final String CACHE_NAME_SEPERATOR = "_";
+    public static final String MAIL_QUEUE = "mail-queue";
+    public static final String QUEUE_PROCESS = "queue_process";
+    public static final String ENABLE_FULLSCAN_JSON = "enable_fullscan_json";
+    public static final String CONTEXT_BASED_QUEUES = "context_based_queues";
+    public static final String DELETION_FW_DATA = "deletion-fw-data";
+    public static final String QUEUE_SOM_LISTENER = "som-listener-data";
+    public static final String QUEUE_UM_LISTENER = "um-listener-data";
+    public static final String QUEUE_CG_LISTENER = "cg-listener-data";
+    public static final String SOM_AD_QUEUE = "som-ad-listener-data";
+    public static final String SOM_AGENT_QUEUE = "som-agent-listener-data";
+    public static final String SOM_OTHER_EVENTS_QUEUE = "som-mgr-listener-data";
+    public static final String SOM_CG_QUEUE = "som-cg-listener-data";
+    public static final String QUEUE_PUSH_TO_PROBE_1 = "push-to-probe-1";
+    public static final String QUEUE_PUSH_TO_PROBE_2 = "push-to-probe-2";
+    public static final String QUEUE_PUSH_TO_PROBE_3 = "push-to-probe-3";
+    public static final String QUEUE_PUSH_TO_PROBE_4 = "push-to-probe-4";
+    public static final String QUEUE_PUSH_TO_PROBE_5 = "push-to-probe-5";
+    public static final String QUEUE_PUSH_TO_PROBE_6 = "push-to-probe-6";
+    public static final String QUEUE_PUSH_TO_PROBE_7 = "push-to-probe-7";
+    public static final String QUEUE_PUSH_TO_PROBE_8 = "push-to-probe-8";
+    public static final String QUEUE_PUSH_TO_PROBE_9 = "push-to-probe-9";
+    public static final String QUEUE_PUSH_TO_PROBE_10 = "push-to-probe-10";
+    public static final String QUEUE_PROBE_ACTION_DATA = "probe-action-data";
+}

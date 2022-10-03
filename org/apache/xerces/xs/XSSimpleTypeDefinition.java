@@ -1,0 +1,69 @@
+package org.apache.xerces.xs;
+
+public interface XSSimpleTypeDefinition extends XSTypeDefinition
+{
+    public static final short VARIETY_ABSENT = 0;
+    public static final short VARIETY_ATOMIC = 1;
+    public static final short VARIETY_LIST = 2;
+    public static final short VARIETY_UNION = 3;
+    public static final short FACET_NONE = 0;
+    public static final short FACET_LENGTH = 1;
+    public static final short FACET_MINLENGTH = 2;
+    public static final short FACET_MAXLENGTH = 4;
+    public static final short FACET_PATTERN = 8;
+    public static final short FACET_WHITESPACE = 16;
+    public static final short FACET_MAXINCLUSIVE = 32;
+    public static final short FACET_MAXEXCLUSIVE = 64;
+    public static final short FACET_MINEXCLUSIVE = 128;
+    public static final short FACET_MININCLUSIVE = 256;
+    public static final short FACET_TOTALDIGITS = 512;
+    public static final short FACET_FRACTIONDIGITS = 1024;
+    public static final short FACET_ENUMERATION = 2048;
+    public static final short FACET_MAXSCALE = 4096;
+    public static final short FACET_MINSCALE = 8192;
+    public static final short FACET_ASSERT = 16384;
+    public static final short FACET_EXPLICITTIMEZONE = Short.MIN_VALUE;
+    public static final short ORDERED_FALSE = 0;
+    public static final short ORDERED_PARTIAL = 1;
+    public static final short ORDERED_TOTAL = 2;
+    
+    short getVariety();
+    
+    XSSimpleTypeDefinition getPrimitiveType();
+    
+    short getBuiltInKind();
+    
+    XSSimpleTypeDefinition getItemType();
+    
+    XSObjectList getMemberTypes();
+    
+    short getDefinedFacets();
+    
+    boolean isDefinedFacet(final short p0);
+    
+    short getFixedFacets();
+    
+    boolean isFixedFacet(final short p0);
+    
+    String getLexicalFacetValue(final short p0);
+    
+    StringList getLexicalEnumeration();
+    
+    StringList getLexicalPattern();
+    
+    short getOrdered();
+    
+    boolean getFinite();
+    
+    boolean getBounded();
+    
+    boolean getNumeric();
+    
+    XSObjectList getFacets();
+    
+    XSObjectList getMultiValueFacets();
+    
+    XSObject getFacet(final int p0);
+    
+    XSObjectList getAnnotations();
+}

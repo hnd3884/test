@@ -1,0 +1,295 @@
+package com.adventnet.sym.server.mdm.android.payload.transform;
+
+import org.json.JSONException;
+import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import com.adventnet.persistence.Row;
+import com.adventnet.sym.server.mdm.android.payload.AndroidRestrictionsPayload;
+import com.adventnet.sym.server.mdm.android.payload.AndroidPayload;
+import com.adventnet.persistence.DataObject;
+
+public class DO2AndroidRestrictionsPolicyPayload implements DO2AndroidPayload
+{
+    static final int ENABLE = 1;
+    static final int NOT_CONFIGURED = -1;
+    static final int USER_CONTROLLED = 4;
+    
+    @Override
+    public AndroidPayload createPayload(final DataObject dataObject) {
+        AndroidRestrictionsPayload payload = null;
+        try {
+            final Iterator iterator = dataObject.getRows("AndroidRestrictionsPolicy");
+            while (iterator.hasNext()) {
+                payload = new AndroidRestrictionsPayload("1.0", "com.mdm.mobiledevice.restrictions", "Restriction Policy");
+                final Row row = iterator.next();
+                final Long configdataItem = (Long)row.get("CONFIG_DATA_ITEM_ID");
+                final int allowPocketData = (int)row.get("ALLOW_POCKET_DATA");
+                final int allowBackgroudData = (int)row.get("ALLOW_BACKGROUND_DATA");
+                final int allowUSB = (int)row.get("ALLOW_USB");
+                final int allowStorageEn = (int)row.get("ALLOW_STORAGE_ENCRYPTION");
+                final int allowExternalStorageEnc = (int)row.get("EXTERNAL_STORAGE_ENCRYPTION");
+                final int allowCamera = (int)row.get("ALLOW_CAMERA");
+                final int disableCellularData = (int)row.get("ALLOW_DISABLING_CELLULAR_DATA");
+                final int disableGPS = (int)row.get("ALLOW_DISABLING_GPS");
+                final int allowMicrophone = (int)row.get("ALLOW_MICROPHONE");
+                final int allowWiFi = (int)row.get("ALLOW_WIFI");
+                final int allowWiFiTethering = (int)row.get(19);
+                final int allowUSBTethering = (int)row.get("ALLOW_USB_TETHERING");
+                final int allowTethering = (int)row.get("ALLOW_TETHERING");
+                final int allowUSBDebug = (int)row.get("ALLOW_USB_DEBUG");
+                final int allowSDCardWrite = (int)row.get("ALLOW_SD_CARD_WRITE");
+                final int allowSDCard = (int)row.get("ALLOW_SD_CARD");
+                final int allowClipboard = (int)row.get("ALLOW_CLIPBOARD");
+                final int allowGoogleCrashReport = (int)row.get("ALLOW_GOOGLE_CRASH_REPORT");
+                final int allowMockLocation = (int)row.get("ALLOW_MOCK_LOCATION");
+                final int allowSettings = (int)row.get("ALLOW_SETTINGS");
+                final int allowFactoryReset = (int)row.get("ALLOW_FACTORY_RESET");
+                final int allowWallpaperChange = (int)row.get("ALLOW_WALLPAPER_CHANGE");
+                final int allowGoogleBackup = (int)row.get("ALLOW_GOOGLE_BACKUP");
+                final int allowBackupAndRestore = (int)row.get("ALLOW_BACKUP_RESTORE");
+                final int allowOTAUpgrage = (int)row.get("ALLOW_OTA_UPGRADE");
+                final int allowVPN = (int)row.get("ALLOW_VPN");
+                final int allowScreenCapture = (int)row.get("ALLOW_SCREEN_CAPTURE");
+                final int allowPowerOff = (int)row.get("ALLOW_POWER_OFF");
+                final int allowUSBMediaPlayer = (int)row.get("ALLOW_USB_MEDIA_PLAYER");
+                final int allowAndroidMarket = (int)row.get("ALLOW_ANDROID_MARKET");
+                final int allowNonMarketApps = (int)row.get("ALLOW_NON_MARKET_APPS");
+                final int allowNonMarketAppsInPersonalSpace = (int)row.get("ALLOW_PERSONAL_SPACE_NON_MARKET_APPS");
+                final int allowYouTube = (int)row.get("ALLOW_YOU_TUBE");
+                final int allowVoiceDialer = (int)row.get("ALLOW_VOICE_DIALER");
+                final int allowInstallApp = (int)row.get("ALLOW_INSTALL_APP");
+                final int allowUnInstallApp = (int)row.get("ALLOW_UNINSTALL_APP");
+                final int allowAndroidBrowser = (int)row.get("ALLOW_ANDROID_BROWSER");
+                final int allowBrowserAutofill = (int)row.get("BROWSER_ALLOW_AUTOFILL");
+                final int allowBrowserFraudWarning = (int)row.get("BROWSER_ALLOW_FRAUD_WARNING");
+                final int allowBrowserPopups = (int)row.get("BROWSER_ALLOW_POPUPS");
+                final int allowBrowserJavaScript = (int)row.get("BROWSER_ALLOW_JAVASCRIPT");
+                final int allowBrowserCookies = (int)row.get("BROWSER_ALLOW_COOKIES");
+                final int allowRoamingSync = (int)row.get("ALLOW_ROAMING_SYNC");
+                final int allowRoamingVoiceCalls = (int)row.get("ALLOW_ROAMING_VOICE_CALLS");
+                final int allowRoamingPush = (int)row.get("ALLOW_ROAMING_PUSH");
+                final int allowRoamingData = (int)row.get("ALLOW_ROAMING_DATA");
+                final int allowUserAddAccount = (int)row.get("ALLOW_USER_ADD_ACCOUNTS");
+                final int allowSFinder = (int)row.get("ALLOW_S_FINDER");
+                final int globalAppPermissionPolicy = (int)row.get("APP_PERMISSION_POLICY");
+                final int allowAirCommand = (int)row.get("ALLOW_AIR_COMMAND");
+                final int allowAirView = (int)row.get("ALLOW_AIR_VIEW");
+                final int allowUserCreation = (int)row.get("ALLOW_USER_CREATION");
+                final int allowSVoice = (int)row.get("ALLOW_S_VOICE");
+                final int allowStopSystemApp = (int)row.get("ALLOW_STOP_SYSTEM_APP");
+                final int allowActivationLock = (int)row.get("ALLOW_ACTIVATION_LOCK");
+                final int allowAirplaneMode = (int)row.get("ALLOW_AIRPLANE_MODE");
+                final int allowBackgroundProcessLimit = (int)row.get("ALLOW_BACKGROUND_PROCESS_LIMIT");
+                final int allowWifiDirect = (int)row.get("ALLOW_WIFI_DIRECT");
+                final int allowWhitelistedWiFi = (int)row.get("ALLOW_WHITELIST_WIFI_ONLY");
+                final int allowSmartClipMode = (int)row.get("ALLOW_SMART_CLIP_MODE");
+                final int allowClipboardShare = (int)row.get("ALLOW_CLIPBOARD_SHARE");
+                final int allowFirmwareRecovery = (int)row.get("ALLOW_FIRMWARE_RECOVERY");
+                final int allowSDCardMove = (int)row.get("ALLOW_SDCARD_MOVE");
+                final int allowSafeMode = (int)row.get("ALLOW_SAFE_MODE");
+                final int allowDeveloperMode = (int)row.get("ALLOW_DEVELOPER_MODE");
+                final int allowKillingActivitiesOnLeave = (int)row.get("ALLOW_KILL_ACTIVITY_ON_LEAVE");
+                final int allowLockScreenView = (int)row.get("ALLOW_LOCK_SCREEN_VIEW");
+                final int allowUserMobileDataLimit = (int)row.get("ALLOW_USER_MOBILE_DATA_LIMIT");
+                final int allowGoogleAccountsAutoSync = (int)row.get("ALLOW_GOOGLE_ACCOUNT_AUTO_SYNC");
+                final int setApplicationNotificationMode = (int)row.get("ALLOW_APP_NOTIFICATION_MODE");
+                final int allowAudioRecord = (int)row.get("ALLOW_AUDIO_RECORD");
+                final int allowVideoRecord = (int)row.get("ALLOW_VIDEO_RECORD");
+                final int allowUsbHostStorage = (int)row.get("ALLOW_USB_HOST_STORAGE");
+                final int allShareList = (int)row.get("ALLOW_SHARE_LIST");
+                final int allowPlayProtectMonitoring = (int)row.get("ALLOW_PLAY_PROTECT_MONITORING");
+                final int allowGmail = (int)row.get("ALLOW_GMAIL");
+                final int allowGoogleMaps = (int)row.get("ALLOW_GOOGLE_MAPS");
+                final int allowSMS = (int)row.get("ALLOW_SMS");
+                final int allowIncommingSMS = (int)row.get("ALLOW_INCOMING_SMS");
+                final int allowOutgoingSMS = (int)row.get("ALLOW_OUTGOING_SMS");
+                final int allowMMS = (int)row.get("ALLOW_MMS");
+                final int allowIncommingMMS = (int)row.get("ALLOW_INCOMING_MMS");
+                final int allowOutgoingMMS = (int)row.get("ALLOW_OUTGOING_MMS");
+                final int allowCall = (int)row.get("ALLOW_CALL");
+                final int allowIncommingCall = (int)row.get("ALLOW_INCOMING_CALL");
+                final int allowOutgoingCall = (int)row.get("ALLOW_OUTGOING_CALL");
+                final int allowBluetoothTethering = (int)row.get("ALLOW_BLUETOOTH_TETHERING");
+                final int allowNonSecureKeypad = (int)row.get("ALLOW_NON_SECURE_KEYPAD");
+                final int allowContactsToDevice = (int)row.get("ALLOW_CONTACT_TO_DEVICE");
+                final int allowKnoxAppStore = (int)row.get("ALLOW_KNOX_APP_STORE");
+                final int allowKeyguardCamera = (int)row.get("ALLOW_KEYGUARD_CAMERA");
+                final int allowKeyguardNotifications = (int)row.get("ALLOW_KEYGUARD_NOTIFICATIONS");
+                final int allowSecuredWifi = (int)row.get("ALLOW_SECURED_WIFI");
+                final boolean allowInstallOrModifyCertificates = (boolean)row.get("ALLOW_INSTALL_OR_MODIFY_CERTIFICATES");
+                final boolean allowAutomateCertificateBasedAuthenticationForManagedApps = (boolean)row.get("ALLOW_CERT_BASED_AUTHENTICATION_FOR_MANAGED_APPS");
+                final Boolean setRoamingAlwaysOn = (Boolean)row.get("SET_ROAMING_ALWAYS_ON");
+                final Boolean setAllowDataSaver = (Boolean)row.get("ALLOW_DATA_SAVER");
+                final Boolean setAllowAutoFillService = (Boolean)row.get("ALLOW_AUTO_FILL_SERVICE");
+                payload.setAllowBackgroudData(allowBackgroudData == 1 || allowBackgroudData == -1);
+                payload.setAllowUSB(allowUSB == 1 || allowUSB == -1);
+                payload.setAllowStorageEncryption(allowStorageEn != 1);
+                payload.setExternalStorageEncryption(allowExternalStorageEnc == 1);
+                payload.setAllowCamera(allowCamera == 1 || allowCamera == -1);
+                payload.setDisablingCellularData(disableCellularData == 1 || disableCellularData == -1);
+                payload.setDisablingGPS((disableGPS == -1) ? 4 : disableGPS);
+                payload.setAllowMicrophone(allowMicrophone == 1 || allowMicrophone == -1);
+                payload.setAllowWiFi((allowWiFi == -1) ? 4 : allowWiFi);
+                final boolean tethering = allowTethering == 1 || allowTethering == -1;
+                if (!tethering) {
+                    payload.setAllowWiFiTethering(tethering);
+                    payload.setAllowBluetoothTethering(tethering);
+                    payload.setAllowUSBTethering(tethering);
+                    payload.setAllowTethering(tethering);
+                }
+                else {
+                    payload.setAllowWiFiTethering(allowWiFiTethering == 1 || allowWiFiTethering == -1);
+                    payload.setAllowBluetoothTethering(allowBluetoothTethering == 1 || allowBluetoothTethering == -1);
+                    payload.setAllowUSBTethering(allowUSBTethering == 1 || allowUSBTethering == -1);
+                    payload.setAllowTethering(tethering);
+                }
+                payload.setAllowUSBDebug(allowUSBDebug == 1 || allowUSBDebug == -1);
+                payload.setAllowSDCardWrite(allowSDCardWrite == 1 || allowSDCardWrite == -1);
+                payload.setAllowSDCard(allowSDCard == 1 || allowSDCard == -1);
+                payload.setAllowClipboard(allowClipboard == 1 || allowClipboard == -1);
+                payload.setAllowGoogleCrashReport(allowGoogleCrashReport == 1 || allowGoogleCrashReport == -1);
+                payload.setAllowCellularData(allowPocketData == 1 || allowPocketData == -1);
+                payload.setAllowMockLocation(allowMockLocation == 1 || allowMockLocation == -1);
+                payload.setAllowSettings(allowSettings == 1 || allowSettings == -1);
+                payload.setAllowFactoryReset(allowFactoryReset == 1 || allowFactoryReset == -1);
+                payload.setAllowWallpaperChange(allowWallpaperChange == 1 || allowWallpaperChange == -1);
+                payload.setAllowGoogleBackup(allowGoogleBackup == 1 || allowGoogleBackup == -1);
+                payload.setAllowBackupAndRestore(allowBackupAndRestore == 1 || allowBackupAndRestore == -1);
+                payload.setAllowOTAUpgrade(allowOTAUpgrage == 1 || allowOTAUpgrage == -1);
+                payload.setAllowVPN(allowVPN == 1 || allowVPN == -1);
+                payload.setAllowScreenCapture(allowScreenCapture == 1 || allowScreenCapture == -1);
+                payload.setAllowPowerOff(allowPowerOff == 1 || allowPowerOff == -1);
+                payload.setAllowUSBMediaPlayer(allowUSBMediaPlayer == 1 || allowUSBMediaPlayer == -1);
+                payload.setAllowAndroidMarket(allowAndroidMarket);
+                payload.setAllowNonMarketApps(allowNonMarketApps == 1 || allowNonMarketApps == -1);
+                payload.setAllowNonMarketAppsInPersonalSpace(allowNonMarketAppsInPersonalSpace == 1 || allowNonMarketAppsInPersonalSpace == -1);
+                payload.setAllowYouTube(allowYouTube);
+                payload.setAllowVoiceDialer(allowVoiceDialer == 1 || allowVoiceDialer == -1);
+                payload.setAllowInstallApp(allowInstallApp == 1 || allowInstallApp == -1);
+                payload.setAllowUnInstallApp(allowUnInstallApp == 1 || allowUnInstallApp == -1);
+                payload.setAllowAndroidBrowser(allowAndroidBrowser == 1 || allowAndroidBrowser == -1);
+                payload.setAllowBrowserAutoFill(allowBrowserAutofill == 1 || allowBrowserAutofill == -1);
+                payload.setAllowBrowserAllowFraudWarning(allowBrowserFraudWarning == 1 || allowBrowserFraudWarning == -1);
+                payload.setAllowBrowserPopUps(allowBrowserPopups == 1 || allowBrowserPopups == -1);
+                payload.setAllowBrowserJavaScript(allowBrowserJavaScript == 1 || allowBrowserJavaScript == -1);
+                payload.setAllowBrowserCookies(allowBrowserCookies == 1 || allowBrowserCookies == -1);
+                payload.setAllowRoamingSync(allowRoamingSync == 1 || allowRoamingSync == -1);
+                payload.setAllowRoamingVoiceCall(allowRoamingVoiceCalls == 1 || allowRoamingVoiceCalls == -1);
+                payload.setAllowRoamingPush(allowRoamingPush == 1 || allowRoamingPush == -1);
+                payload.setAllowRoamingData(allowRoamingData == 1 || allowRoamingData == -1);
+                payload.setSetRoamingAlwaysOn(setRoamingAlwaysOn);
+                payload.setAllowUserAddAccount(allowUserAddAccount == 1 || allowUserAddAccount == -1);
+                payload.setAllowSFinder(allowSFinder);
+                payload.setGlobalPermissionPolicyState(globalAppPermissionPolicy);
+                payload.setAllowAirCommand(allowAirCommand == 1 || allowAirCommand == -1);
+                payload.setAllowAirView(allowAirView == 1 || allowAirCommand == -1);
+                payload.setAllowUserCreation(allowUserCreation == 1 || allowUserCreation == -1);
+                payload.setAllowSVoice(allowSVoice == 1 || allowSVoice == -1);
+                payload.setAllowStopSystemApp(allowStopSystemApp == 1 || allowStopSystemApp == -1);
+                payload.setAllowActivationLock(allowActivationLock == 1 || allowActivationLock == -1);
+                payload.setAllowAirplaneMode(allowAirplaneMode == 1 || allowAirplaneMode == -1);
+                payload.setAllowBackgroundProcessLimit(allowBackgroundProcessLimit == 1 || allowBackgroundProcessLimit == -1);
+                payload.setAllowWifiDirect(allowWifiDirect == 1 || allowWifiDirect == -1);
+                payload.setAllowedWhitelistedWifi(allowWhitelistedWiFi == 1);
+                payload.setAllowSmartClipMode(allowSmartClipMode == 1 || allowSmartClipMode == -1);
+                payload.setAllowClipboardShare(allowClipboardShare == 1 || allowClipboardShare == -1);
+                payload.setAllowFirmwareRecovery(allowFirmwareRecovery == 1 || allowFirmwareRecovery == -1);
+                payload.setAllowSDCardMove(allowSDCardMove == 1 || allowSDCardMove == -1);
+                payload.setAllowSafeMode(allowSafeMode == 1 || allowSafeMode == -1);
+                payload.setAllowDeveloperMode(allowDeveloperMode == 1 || allowDeveloperMode == -1);
+                payload.setAllowKillingActivitiesOnLeave(allowKillingActivitiesOnLeave == 1 || allowKillingActivitiesOnLeave == -1);
+                payload.setAllowLockScreenView(allowLockScreenView == 1 || allowLockScreenView == -1);
+                payload.setAllowUserMobileDataLimit(allowUserMobileDataLimit == 1 || allowUserMobileDataLimit == -1);
+                payload.setAllowGoogleAccountsAutoSync(allowGoogleAccountsAutoSync == 1 || allowGoogleAccountsAutoSync == -1);
+                payload.setApplicationNotificationMode(setApplicationNotificationMode == 1 || setApplicationNotificationMode == -1);
+                payload.setAllowAudioRecord(allowAudioRecord == 1 || allowAudioRecord == -1);
+                payload.setAllowVideoRecord(allowVideoRecord == 1 || allowVideoRecord == -1);
+                payload.setAllowUsbHostStorage(allowUsbHostStorage == 1 || allowUsbHostStorage == -1);
+                payload.setAllowGmail(allowGmail);
+                payload.setAllowGoogleMaps(allowGoogleMaps == 1 || allowGoogleMaps == -1);
+                payload.setAllowSMS(allowSMS == 1 || allowSMS == -1);
+                payload.setAllowIncommingSMS(allowIncommingSMS == 1 || allowIncommingSMS == -1);
+                payload.setAllowOutgoingSMS(allowOutgoingSMS == 1 || allowOutgoingSMS == -1);
+                payload.setAllowMMS(allowMMS == 1 || allowMMS == -1);
+                payload.setAllowIncommingMMS(allowIncommingMMS == 1 || allowIncommingMMS == -1);
+                payload.setAllowOutgoingMMS(allowOutgoingMMS == 1 || allowOutgoingMMS == -1);
+                payload.setAllowCall(allowCall == 1 || allowCall == -1);
+                payload.setAllowIncommingCall(allowIncommingCall == 1 || allowIncommingCall == -1);
+                payload.setAllowOutgoingCall(allowOutgoingCall == 1 || allowOutgoingCall == -1);
+                payload.setAllowPlatProtectMonitoring(allowPlayProtectMonitoring == -1 || allowPlayProtectMonitoring == 1);
+                payload.setAllowShareList(allShareList == 1 || allShareList == -1);
+                payload.setAllowKnoxAppStore(allowKnoxAppStore == 1 || allowKnoxAppStore == -1);
+                payload.setAllowContactsOutside(allowContactsToDevice == 1 || allowContactsToDevice == -1);
+                payload.setAllowNonSecureKeypad(allowNonSecureKeypad == 1 || allowNonSecureKeypad == -1);
+                payload.setAllowKeyguardCamera(allowKeyguardCamera == 1 || allowKeyguardCamera == -1);
+                payload.setAllowKeyguardNotifications(allowKeyguardNotifications);
+                payload.setAllowInstallOrModifyCertificates(allowInstallOrModifyCertificates);
+                payload.setAllowAutomateCertificateBasedAuthenticationForManagedApps(allowAutomateCertificateBasedAuthenticationForManagedApps);
+                payload.setAllowDataSaver(setAllowDataSaver);
+                payload.setAllowSecuredWifi(allowSecuredWifi);
+                payload.setAllowAutoFillService(setAllowAutoFillService);
+                payload = this.setDeviceConnectionRestrictions(row, payload);
+                payload = this.setTimeRestriction(row, payload);
+                payload = this.setDisplayRestriction(row, payload);
+                payload.setPayloadUUID(configdataItem);
+            }
+        }
+        catch (final Exception ex) {
+            Logger.getLogger(DO2AndroidRestrictionsPolicyPayload.class.getName()).log(Level.SEVERE, "Exception in createPayload", ex);
+        }
+        return payload;
+    }
+    
+    private AndroidRestrictionsPayload setDisplayRestriction(final Row row, final AndroidRestrictionsPayload payload) throws JSONException {
+        final Boolean ambientDisplay = (Boolean)row.get("ALLOW_AMBIENT_DISPLAY");
+        final Boolean brightnessConfig = (Boolean)row.get("ALLOW_BRIGHTNESS_CONFIG");
+        final Boolean adaptiveBrightness = (Boolean)row.get("ADAPTIVE_BRIGHTNESS");
+        final int brightnessValue = (int)row.get("BRIGHTNESS_VALUE");
+        final Boolean allowScreenTimeoutConfig = (Boolean)row.get("ALLOW_CONFIG_SCREEN_TIMEOUT");
+        final int screenTimeout = (int)row.get("SCREEN_TIMEOUT");
+        payload.setAmbientDisplay(ambientDisplay);
+        payload.setBrightnessConfig(brightnessConfig);
+        payload.setAdaptiveBrightness(adaptiveBrightness);
+        payload.setBrightness(brightnessValue);
+        payload.setAllowScreenTimeoutConfig(allowScreenTimeoutConfig);
+        payload.setScreenTimeout(screenTimeout);
+        return payload;
+    }
+    
+    private AndroidRestrictionsPayload setDeviceConnectionRestrictions(final Row row, final AndroidRestrictionsPayload payload) throws JSONException {
+        final int allowNfc = (int)row.get("ALLOW_NFC");
+        final int allowAndroidBeam = (int)row.get("ALLOW_ANDROID_BEAM");
+        final int allowSBeam = (int)row.get("ALLOW_S_BEAM");
+        final int allowBluetooth = (int)row.get("ALLOW_BLUETOOTH");
+        final int allowBtDiscoverable = (int)row.get("ALLOW_BT_DISCOVERABLE");
+        final int allowBtPairing = (int)row.get("ALLOW_BT_PAIRING");
+        final int allowBtOutgoingCalls = (int)row.get("ALLOW_BT_OUTGOING_CALLS");
+        final int allowBtPcConnection = (int)row.get("ALLOW_BT_PC_CONNECTION");
+        final int allowBtDataTransfer = (int)row.get("ALLOW_BT_DATA_TRANSFER");
+        final Boolean allowPrinting = (Boolean)row.get("ALLOW_PRINTING");
+        payload.setAllowNFCStateChange((allowNfc == -1) ? 4 : allowNfc);
+        payload.setAllowAndroidBeam(allowAndroidBeam == 1 || allowAndroidBeam == -1);
+        payload.setAllowSBeam(allowSBeam == 1 || allowSBeam == -1);
+        payload.setAllowBtDiscoverable(allowBtDiscoverable == 1 || allowBtDiscoverable == -1);
+        payload.setAllowBtPairing(allowBtPairing == 1 || allowBtPairing == -1);
+        payload.setAllowBtOutgoingCalls(allowBtOutgoingCalls == 1 || allowBtOutgoingCalls == -1);
+        payload.setAllowBtPcConnection(allowBtPcConnection == 1 || allowBtPcConnection == -1);
+        payload.setAllowBtDataTransfer(allowBtDataTransfer == 1 || allowBtDataTransfer == -1);
+        payload.setAllowBTStateChange((allowBluetooth == -1) ? 4 : allowBluetooth);
+        payload.setAllowPrinting(allowPrinting);
+        return payload;
+    }
+    
+    private AndroidRestrictionsPayload setTimeRestriction(final Row row, final AndroidRestrictionsPayload payload) throws JSONException {
+        final String setTimeZone = (String)row.get("ALLOW_TIMEZONE");
+        final int setDateTimeChangeEnabled = (int)row.get("ALLOW_DATE_TIME_CHANGE");
+        final int allowNetworkTime = (int)row.get("ALLOW_USE_NETWORK_TIME");
+        final Boolean allowTimeDateSettings = (Boolean)row.get("ALLOW_DATE_TIME_SETTINGS");
+        payload.setTimeZone(setTimeZone);
+        payload.setDateTimeChangeEnabled(setDateTimeChangeEnabled == 1 || setDateTimeChangeEnabled == -1);
+        payload.setAllowNetworkTime(allowNetworkTime == 1 || allowNetworkTime == -1);
+        payload.setAllowTimeDateSettings(allowTimeDateSettings);
+        return payload;
+    }
+}

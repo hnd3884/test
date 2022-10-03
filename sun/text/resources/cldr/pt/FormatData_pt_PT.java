@@ -1,0 +1,11 @@
+package sun.text.resources.cldr.pt;
+
+import java.util.ListResourceBundle;
+
+public class FormatData_pt_PT extends ListResourceBundle
+{
+    @Override
+    protected final Object[][] getContents() {
+        return new Object[][] { { "MonthNames", { "Janeiro", "Fevereiro", "Mar\u00e7o", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro", "" } }, { "MonthAbbreviations", { "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez", "" } }, { "DayNames", { "Domingo", "Segunda-feira", "Ter\u00e7a-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "S\u00e1bado" } }, { "QuarterNames", { "1.º trimestre", "2.º trimestre", "3.º trimestre", "4.º trimestre" } }, { "AmPmMarkers", { "a.m.", "p.m." } }, { "narrow.AmPmMarkers", { "a.m.", "p.m." } }, { "TimePatterns", { "H:mm:ss zzzz", "H:mm:ss z", "HH:mm:ss", "HH:mm" } }, { "java.time.buddhist.DatePatterns", { "EEEE, d 'de' MMMM 'de' y G", "d 'de' MMMM 'de' y G", "dd/MM/yyyy G", "d/M/y G" } }, { "buddhist.DatePatterns", { "EEEE, d 'de' MMMM 'de' y GGGG", "d 'de' MMMM 'de' y GGGG", "dd/MM/yyyy GGGG", "d/M/y GGGG" } }, { "java.time.japanese.DatePatterns", { "EEEE, d 'de' MMMM 'de' y G", "d 'de' MMMM 'de' y G", "dd/MM/yyyy G", "d/M/y G" } }, { "japanese.DatePatterns", { "EEEE, d 'de' MMMM 'de' y GGGG", "d 'de' MMMM 'de' y GGGG", "dd/MM/yyyy GGGG", "d/M/y GGGG" } }, { "java.time.roc.DatePatterns", { "EEEE, d 'de' MMMM 'de' y G", "d 'de' MMMM 'de' y G", "dd/MM/yyyy G", "d/M/y G" } }, { "roc.DatePatterns", { "EEEE, d 'de' MMMM 'de' y GGGG", "d 'de' MMMM 'de' y GGGG", "dd/MM/yyyy GGGG", "d/M/y GGGG" } }, { "java.time.islamic.DatePatterns", { "EEEE, d 'de' MMMM 'de' y G", "d 'de' MMMM 'de' y G", "dd/MM/yyyy G", "d/M/y G" } }, { "islamic.DatePatterns", { "EEEE, d 'de' MMMM 'de' y GGGG", "d 'de' MMMM 'de' y GGGG", "dd/MM/yyyy GGGG", "d/M/y GGGG" } }, { "calendarname.islamic-civil", "Calend\u00e1rio Isl\u00e2mico/Civil" }, { "calendarname.islamicc", "Calend\u00e1rio Isl\u00e2mico/Civil" }, { "DefaultNumberingSystem", "latn" }, { "latn.NumberElements", { "$", ",", ";", "%", "0", "#", "-", "E", "\u2030", "\u221e", "NaN" } }, { "NumberPatterns", { "#,##0.###", "#,##0.00 ¤", "#,##0%" } } };
+    }
+}
